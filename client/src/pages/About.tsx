@@ -1,180 +1,134 @@
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { GraduationCap, Target, Lightbulb, Users, Globe, Award } from "lucide-react";
+import { CheckCircle, GraduationCap, Briefcase, Code, TrendingUp } from "lucide-react";
+import { SiPython, SiDatabricks, SiJavascript, SiHtml5, SiCss3, SiPostgresql } from "react-icons/si";
+import profileImage from "@assets/FotoDePerfilNew_1767892057825.jpeg";
 
-const skills = {
-  technical: [
-    "Python (Pandas, Automation)",
-    "SQL (Intermediate)",
-    "Power BI (Advanced)",
-    "Databricks (ETL)",
-    "Microsoft Azure",
-    "n8n",
-    "Power Automate",
-    "HTML/CSS/JavaScript",
-  ],
-  soft: [
-    "Effective Communication",
-    "Professional Ethics",
-    "Analytical Thinking",
-    "Creative Problem Solving",
-  ],
-};
+const technologies = [
+  { name: "Python", icon: SiPython, color: "text-yellow-400" },
+  { name: "SQL", icon: SiPostgresql, color: "text-blue-400" },
+  { name: "Databricks", icon: SiDatabricks, color: "text-red-500" },
+  { name: "JavaScript", icon: SiJavascript, color: "text-yellow-300" },
+  { name: "HTML5", icon: SiHtml5, color: "text-orange-500" },
+  { name: "CSS3", icon: SiCss3, color: "text-blue-500" },
+];
 
-const interests = [
-  { icon: Target, label: "AI & Machine Learning" },
-  { icon: Lightbulb, label: "Business Optimization" },
-  { icon: Globe, label: "LATAM Expansion" },
-  { icon: Users, label: "Team Collaboration" },
+const stats = [
+  { value: "20k+", label: "Social Media Followers", icon: TrendingUp },
+  { value: "3+", label: "Years Coding", icon: Code },
+  { value: "10+", label: "Projects Completed", icon: Briefcase },
 ];
 
 export default function About() {
   return (
     <div className="min-h-[calc(100vh-100px)] py-12 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="font-mono text-muted-foreground text-sm mb-8">
-          <span className="text-cyan-400">{"// "}</span>About Me
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold mb-3">About Me</h1>
+          <p className="text-muted-foreground text-lg">
+            Industrial Engineering Student & AI Enthusiast
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-[300px_1fr] gap-10 items-start">
+          <div className="space-y-6">
+            <div className="relative">
+              <div className="rounded-lg overflow-hidden border border-border/50 bg-muted/20 shadow-lg">
+                <img
+                  src={profileImage}
+                  alt="Lukas Salguero"
+                  className="w-full h-auto object-cover"
+                  data-testid="img-profile"
+                />
+              </div>
+              <div className="absolute bottom-3 left-3 right-3">
+                <Badge className="w-full justify-center gap-2 py-1.5 bg-green-500/90 text-white border-0 font-medium">
+                  <CheckCircle className="w-3.5 h-3.5" />
+                  Available for projects
+                </Badge>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3">
+              <Card className="p-4 bg-card/50 border-border text-center">
+                <p className="text-2xl font-bold text-primary">20k+</p>
+                <p className="text-xs text-muted-foreground">Social Followers</p>
+              </Card>
+              <Card className="p-4 bg-card/50 border-border text-center">
+                <p className="text-2xl font-bold text-primary">3+</p>
+                <p className="text-xs text-muted-foreground">Years Coding</p>
+              </Card>
+            </div>
+          </div>
+
           <div className="space-y-8">
-            <div>
-              <h1 className="text-4xl font-bold mb-6">
-                Industrial Engineering Student & Tech Enthusiast
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                I'm a 20-year-old Industrial Engineering student at PUCP with hands-on experience 
-                in Business Intelligence, data analysis, and process optimization.
+            <div className="space-y-4">
+              <p className="text-muted-foreground leading-relaxed">
+                I'm <span className="text-foreground font-medium">Lukas Salguero</span>, a 20-year-old{" "}
+                <span className="text-primary">Industrial Engineering</span> student at{" "}
+                <span className="text-cyan-400">PUCP</span> with hands-on experience in Business Intelligence, 
+                data analysis, and process optimization.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I enjoy turning complex information into clear insights, building simple digital 
-                solutions, and proposing creative ways to improve operations. I'm especially 
-                interested in joining companies that are expanding their operations into LATAM, 
-                where I can learn fast, take ownership early, and contribute with a mix of 
-                analytical thinking, creativity, and a strong drive to grow.
+                I'm also a <span className="text-primary">content creator</span> with 20k+ followers, sharing 
+                insights about engineering and student life. I enjoy turning complex information into clear 
+                insights and building simple digital solutions.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Interested in joining companies expanding into <span className="text-cyan-400">LATAM</span>, 
+                where I can learn fast, take ownership early, and contribute with analytical thinking and creativity.
               </p>
             </div>
-
-            <Card className="p-6 bg-card/50 border-border">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-primary/10">
-                  <GraduationCap className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-1">Education</h3>
-                  <p className="font-medium">Industrial Engineering</p>
-                  <p className="text-muted-foreground text-sm">
-                    Pontificia Universidad Catolica del Peru (PUCP)
-                  </p>
-                  <p className="text-muted-foreground text-sm">2022 - Present</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-6 bg-card/50 border-border">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-lg bg-cyan-500/10">
-                  <Award className="w-6 h-6 text-cyan-400" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-1">Certification</h3>
-                  <p className="font-medium">Summer Camp - Business and Data Analytics</p>
-                  <p className="text-muted-foreground text-sm">
-                    Stanford Engineering and Business School
-                  </p>
-                  <p className="text-muted-foreground text-sm">June 2025</p>
-                </div>
-              </div>
-            </Card>
 
             <div>
-              <h3 className="font-mono text-sm text-cyan-400 mb-4">{"// "}Focus Areas</h3>
-              <div className="grid grid-cols-2 gap-4">
-                {interests.map((interest) => (
-                  <div 
-                    key={interest.label}
-                    className="flex items-center gap-3 p-4 rounded-lg bg-muted/30 border border-border"
+              <h3 className="font-mono text-sm text-cyan-400 mb-4">{"// "}Technologies</h3>
+              <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
+                {technologies.map((tech) => (
+                  <Card 
+                    key={tech.name}
+                    className="p-4 bg-card/50 border-border flex flex-col items-center gap-2"
                   >
-                    <interest.icon className="w-5 h-5 text-primary" />
-                    <span className="text-sm">{interest.label}</span>
+                    <tech.icon className={`w-7 h-7 ${tech.color}`} />
+                    <span className="text-xs text-muted-foreground">{tech.name}</span>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="font-mono text-sm text-cyan-400 mb-4">{"// "}In Numbers</h3>
+              <div className="grid grid-cols-3 gap-4">
+                {stats.map((stat) => (
+                  <div key={stat.label} className="text-center">
+                    <p className="text-3xl font-bold text-primary">{stat.value}</p>
+                    <p className="text-xs text-muted-foreground">{stat.label}</p>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
 
-          <div className="space-y-8">
-            <Card className="p-6 bg-card/50 border-border">
-              <h3 className="font-mono text-sm text-cyan-400 mb-6">{"// "}Technical Skills</h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.technical.map((skill) => (
-                  <Badge 
-                    key={skill} 
-                    variant="secondary"
-                    className="bg-primary/10 text-primary border-primary/20 font-mono text-xs"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </Card>
-
-            <Card className="p-6 bg-card/50 border-border">
-              <h3 className="font-mono text-sm text-cyan-400 mb-6">{"// "}Soft Skills</h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.soft.map((skill) => (
-                  <Badge 
-                    key={skill} 
-                    variant="secondary"
-                    className="bg-muted text-muted-foreground font-mono text-xs"
-                  >
-                    {skill}
-                  </Badge>
-                ))}
-              </div>
-            </Card>
-
-            <Card className="p-6 bg-card/50 border-border">
-              <h3 className="font-mono text-sm text-cyan-400 mb-6">{"// "}Languages</h3>
-              <div className="space-y-4">
-                <div>
-                  <div className="flex justify-between text-sm mb-2">
-                    <span>Spanish</span>
-                    <span className="text-muted-foreground">Native</span>
-                  </div>
-                  <div className="h-2 bg-muted rounded-full overflow-hidden">
-                    <div className="h-full bg-primary rounded-full" style={{ width: "100%" }} />
-                  </div>
+            <Card className="p-4 bg-card/50 border-border">
+              <div className="flex items-start gap-3">
+                <div className="p-2 rounded-lg bg-primary/10">
+                  <GraduationCap className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <div className="flex justify-between text-sm mb-2">
-                    <span>English</span>
-                    <span className="text-muted-foreground">Advanced (B2 - First Certificate)</span>
-                  </div>
-                  <div className="h-2 bg-muted rounded-full overflow-hidden">
-                    <div className="h-full bg-primary rounded-full" style={{ width: "85%" }} />
-                  </div>
+                  <h4 className="font-semibold">Industrial Engineering</h4>
+                  <p className="text-sm text-muted-foreground">PUCP - 2022 to Present</p>
                 </div>
               </div>
             </Card>
-
-            <Card className="p-6 bg-card/50 border-border">
-              <h3 className="font-mono text-sm text-cyan-400 mb-4">{"// "}Fun Fact</h3>
-              <p className="text-muted-foreground">
-                Content creator for university students with 20k+ followers on social media, 
-                sharing insights about engineering and student life.
-              </p>
-            </Card>
-
-            <div className="font-mono text-xs text-muted-foreground/50 p-4 bg-muted/20 rounded-lg">
-              <pre>{`const lukas = {
-  location: "Lima, Peru",
-  status: "Open to opportunities",
-  passion: "Building practical solutions",
-  motto: "Learn fast, take ownership"
-};`}</pre>
-            </div>
           </div>
+        </div>
+
+        <div className="mt-12 font-mono text-sm text-muted-foreground p-6 bg-muted/20 rounded-lg border border-border/50">
+          <p className="mb-2">
+            <span className="text-green-400">$</span>{" "}
+            <span className="text-cyan-400">cat</span> ~/career/highlights.json
+          </p>
+          <p className="text-muted-foreground/60 animate-pulse">
+            Loading professional milestones...
+          </p>
         </div>
       </div>
     </div>
