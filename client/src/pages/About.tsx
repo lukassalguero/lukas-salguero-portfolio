@@ -179,8 +179,8 @@ export default function About() {
             <span className="text-xs text-muted-foreground/50 ml-auto">~/career/</span>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-0 min-h-[360px]">
-            <div className="p-6 space-y-4 flex flex-col justify-center">
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="p-5 space-y-3 flex flex-col justify-start pt-6">
               <div className="font-mono text-xs space-y-1">
                 <p className="text-muted-foreground/60 text-[14px]">{"// "}{currentHighlight.category}</p>
                 {Object.entries(currentHighlight.code).map(([key, value]) => (
@@ -221,7 +221,7 @@ export default function About() {
               <img
                 src={currentHighlight.image}
                 alt={currentHighlight.title}
-                className="w-full h-full min-h-[360px] object-cover object-center"
+                className="w-full h-full min-h-[280px] max-h-[320px] object-cover object-center"
                 data-testid={`img-highlight-${currentHighlight.id}`}
               />
             </div>
