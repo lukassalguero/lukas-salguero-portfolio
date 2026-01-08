@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { Building2, Code2, FlaskConical, Plane } from "lucide-react";
+import { Building2, Code2, FlaskConical } from "lucide-react";
 
 const experiences = [
   {
@@ -46,21 +46,6 @@ const experiences = [
       "Created SQL queries to extract and segment patient data by demographic groups, service type, enabling deeper comparisons. And performed data cleaning using Python (Pandas).",
     ],
     skills: ["SQL", "Python", "Pandas", "Data Cleaning", "Healthcare Analytics"],
-  },
-  {
-    id: 4,
-    role: "Work and Travel Program",
-    company: "Cultural Exchange",
-    period: "2023",
-    icon: Plane,
-    color: "text-orange-400",
-    bgColor: "bg-orange-500/10",
-    highlights: [
-      "Participated in international work and travel program, gaining cross-cultural experience",
-      "Developed adaptability and communication skills in diverse environments",
-      "Enhanced English language proficiency through daily professional interactions",
-    ],
-    skills: ["English", "Adaptability", "Cross-cultural Communication", "Independence"],
   },
 ];
 
