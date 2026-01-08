@@ -1,9 +1,7 @@
-import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Building2, Code2, FlaskConical, Award, Users } from "lucide-react";
+import { Building2, Code2, FlaskConical, Award } from "lucide-react";
 import bcpTeamImage from "@assets/image_1767855533853.png";
 
 const experiences = [
@@ -120,59 +118,40 @@ export default function Experience() {
                     </div>
 
                     {(exp.teamImage || exp.certificateUrl) && (
-                      <div className="pt-4 border-t border-border/50">
-                        <div className="flex flex-wrap items-center gap-3">
-                          {exp.teamImage && (
-                            <Dialog>
-                              <DialogTrigger asChild>
-                                <button 
-                                  className="group flex items-center gap-2 px-3 py-2 rounded-lg bg-muted/30 border border-border/50 transition-all duration-200 hover-elevate"
-                                  data-testid="button-view-team"
-                                >
-                                  <div className="relative w-10 h-10 rounded-md overflow-hidden">
-                                    <img 
-                                      src={exp.teamImage} 
-                                      alt="Team photo" 
-                                      className="w-full h-full object-cover"
-                                    />
-                                  </div>
-                                  <div className="flex items-center gap-1.5">
-                                    <Users className="w-3.5 h-3.5 text-muted-foreground" />
-                                    <span className="text-xs text-muted-foreground font-mono">Team</span>
-                                  </div>
-                                </button>
-                              </DialogTrigger>
-                              <DialogContent className="max-w-2xl p-2 bg-card border-border">
-                                <img 
-                                  src={exp.teamImage} 
-                                  alt="BCP Team" 
-                                  className="w-full h-auto rounded-lg"
-                                />
-                                <p className="text-center text-sm text-muted-foreground mt-2 font-mono">
-                                  {"// "}<span className="text-cyan-400">With the BCP team</span>
-                                </p>
-                              </DialogContent>
-                            </Dialog>
-                          )}
-                          
-                          {exp.certificateUrl && (
-                            <a
-                              href={exp.certificateUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              data-testid="link-certificate"
+                      <div className="pt-4 border-t border-border/50 space-y-4">
+                        {exp.teamImage && (
+                          <div className="relative">
+                            <div className="font-mono text-xs text-muted-foreground mb-2">
+                              <span className="text-cyan-400">{"// "}</span>With the team
+                            </div>
+                            <div className="relative rounded-lg overflow-hidden border border-border/50">
+                              <img 
+                                src={exp.teamImage} 
+                                alt="BCP Team" 
+                                className="w-full max-w-md h-auto object-cover"
+                                data-testid="img-bcp-team"
+                              />
+                            </div>
+                          </div>
+                        )}
+                        
+                        {exp.certificateUrl && (
+                          <a
+                            href={exp.certificateUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-testid="link-certificate"
+                          >
+                            <Button 
+                              variant="ghost" 
+                              size="sm"
+                              className="gap-2 font-mono text-xs text-muted-foreground"
                             >
-                              <Button 
-                                variant="ghost" 
-                                size="sm"
-                                className="gap-2 font-mono text-xs text-muted-foreground"
-                              >
-                                <Award className="w-3.5 h-3.5" />
-                                View Certificate
-                              </Button>
-                            </a>
-                          )}
-                        </div>
+                              <Award className="w-3.5 h-3.5" />
+                              View Certificate
+                            </Button>
+                          </a>
+                        )}
                       </div>
                     )}
                   </Card>
