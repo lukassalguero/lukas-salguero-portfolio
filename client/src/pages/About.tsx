@@ -30,34 +30,19 @@ export default function About() {
         </div>
 
         <div className="grid lg:grid-cols-[300px_1fr] gap-10 items-start">
-          <div className="space-y-6">
-            <div className="relative">
-              <div className="rounded-lg overflow-hidden border border-border/50 bg-muted/20 shadow-lg">
-                <img
-                  src={profileImage}
-                  alt="Lukas Salguero"
-                  className="w-full h-auto object-cover"
-                  data-testid="img-profile"
-                />
-              </div>
-              <div className="absolute bottom-3 left-3 right-3">
-                <Badge className="w-full justify-center gap-2 py-1.5 bg-green-500/90 text-white border-0 font-medium">
-                  <CheckCircle className="w-3.5 h-3.5" />
-                  Available for projects
-                </Badge>
-              </div>
+          <div className="space-y-4">
+            <div className="rounded-lg overflow-hidden border border-border/50 bg-muted/20 shadow-lg">
+              <img
+                src={profileImage}
+                alt="Lukas Salguero"
+                className="w-full h-auto object-cover"
+                data-testid="img-profile"
+              />
             </div>
-
-            <div className="grid grid-cols-2 gap-3">
-              <Card className="p-4 bg-card/50 border-border text-center">
-                <p className="text-2xl font-bold text-primary">20k+</p>
-                <p className="text-xs text-muted-foreground">Social Followers</p>
-              </Card>
-              <Card className="p-4 bg-card/50 border-border text-center">
-                <p className="text-2xl font-bold text-primary">3+</p>
-                <p className="text-xs text-muted-foreground">Years Coding</p>
-              </Card>
-            </div>
+            <Badge className="w-full justify-center gap-2 py-2 bg-green-500/90 text-white border-0 font-medium">
+              <CheckCircle className="w-4 h-4" />
+              Open to Work
+            </Badge>
           </div>
 
           <div className="space-y-8">
