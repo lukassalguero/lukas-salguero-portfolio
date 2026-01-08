@@ -28,8 +28,7 @@ const experiences = [
     color: "text-green-400",
     bgColor: "bg-green-500/10",
     highlights: [
-      "Built functional websites for small local businesses, focusing on clear structure to improve digital presence",
-      "Used HTML, CSS, JavaScript and AI-assisted tools to speed up development and solve technical tasks efficiently",
+      "Built functional websites for small local businesses, focusing on clear structure to improve their digital presence using HTML, CSS and AI tools to speed up development and solve technical tasks more efficiently.",
       "Managed full project cycle: client meetings, requirements gathering, development, and delivery with domain/hosting setup",
     ],
     skills: ["HTML", "CSS", "JavaScript", "AI Tools", "Client Management"],
@@ -44,9 +43,7 @@ const experiences = [
     bgColor: "bg-purple-500/10",
     highlights: [
       "Participated in university-led engineering project supporting a public healthcare center",
-      "Analyzed survey data on access to medical services to identify improvement opportunities",
-      "Created SQL queries to extract and segment patient data by demographics, service type, and waiting times",
-      "Performed data cleaning using Python (Pandas) for deeper analysis and comparisons",
+      "Created SQL queries to extract and segment patient data by demographic groups, service type, enabling deeper comparisons. And performed data cleaning using Python (Pandas).",
     ],
     skills: ["SQL", "Python", "Pandas", "Data Cleaning", "Healthcare Analytics"],
   },
