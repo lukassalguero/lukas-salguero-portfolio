@@ -28,14 +28,14 @@ const highlights = [
     id: 1,
     category: "Academic Education",
     code: {
-      university: "Javeriana",
-      city: "Bogota, Colombia",
-      year: 2023,
-      impact: "cultural_growth",
+      university: "Pontificia Universidad Católica del Perú",
+      city: "Lima, Peru",
+      year: "2022-2026",
+      Degree: "Industrial Engineering",
     },
     title: "Academic Exchange",
     description: "Engineering student with a strong interest in problem-solving, data analysis, and understanding how technology supports better business decisions.",
-    tags: ["Academic", "International", "Colombia"],
+    tags: [],
     image: highlightImage1,
     command: "./view_experience.sh",
   },
@@ -184,16 +184,12 @@ export default function About() {
               <div className="font-mono text-xs space-y-1">
                 <p className="text-muted-foreground/60 text-[14px]">{"// "}{currentHighlight.category}</p>
                 {Object.entries(currentHighlight.code).map(([key, value]) => (
-                  <p key={key} className="pl-4 text-[13px]">
+                  <p key={key} className="text-[13px]">
                     <span className="text-cyan-400">"{key}"</span>
                     <span className="text-muted-foreground">: </span>
-                    <span className={typeof value === "number" ? "text-orange-400" : "text-green-400"}>
-                      {typeof value === "number" ? value : `"${value}"`}
-                    </span>
-                    <span className="text-muted-foreground">,</span>
+                    <span className="text-green-400">"{value}"</span>
                   </p>
                 ))}
-                <p>{"}"}</p>
               </div>
 
               <div className="pt-4">
