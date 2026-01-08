@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, Github, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Linkedin, Phone, MapPin, Send } from "lucide-react";
+import { SiInstagram } from "react-icons/si";
 
 const contactMethods = [
   {
@@ -20,12 +21,12 @@ const contactMethods = [
     bgColor: "bg-blue-500/10",
   },
   {
-    icon: Github,
-    label: "GitHub",
-    value: "github.com/lukassalguero",
-    href: "https://github.com/lukassalguero",
-    color: "text-gray-400",
-    bgColor: "bg-gray-500/10",
+    icon: SiInstagram,
+    label: "Instagram",
+    value: "@lukas_salguero",
+    href: "https://www.instagram.com/lukas_salguero/",
+    color: "text-pink-400",
+    bgColor: "bg-pink-500/10",
   },
   {
     icon: Phone,
