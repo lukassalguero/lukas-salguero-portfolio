@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Building2, Code2, FlaskConical, Award } from "lucide-react";
 import bcpTeamImage1 from "@assets/image_1767855533853.png";
 import bcpTeamImage2 from "@assets/image_1767890527899.png";
+import innovalabTeamImage from "@assets/image_1767890798616.png";
 
 const experiences = [
   {
@@ -51,6 +52,7 @@ const experiences = [
       "Created SQL queries to extract and segment patient data by demographic groups, service type, enabling deeper comparisons. And performed data cleaning using Python (Pandas).",
     ],
     skills: ["SQL", "Python"],
+    teamImages: [innovalabTeamImage],
   },
 ];
 
