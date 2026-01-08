@@ -1,25 +1,58 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Play } from "lucide-react";
+import { ExternalLink, Play, FileSpreadsheet, Code2, Database, BarChart3, Presentation, ArrowRight, Github } from "lucide-react";
+import { SiPython, SiPowerbi } from "react-icons/si";
 
-const projects = [
+const pipelineSteps = [
   {
-    id: 1,
-    name: "Ecommerce_Landing.exe",
-    client: "Local Retail Business",
-    date: "November 2024",
-    description: "Landing page desarrollada para un negocio de retail local, enfocada en conversiones y mejora de presencia digital. Diseño responsive con optimización para dispositivos móviles.",
-    tech: ["HTML", "CSS", "JavaScript", "Responsive"],
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-    hasDemo: true,
-    hasLive: true,
+    step: 1,
+    title: "Data Collection",
+    tool: "Excel",
+    icon: FileSpreadsheet,
+    color: "bg-green-500",
+    description: "Raw data gathering",
   },
+  {
+    step: 2,
+    title: "Data Cleaning",
+    tool: "Python",
+    icon: Code2,
+    color: "bg-yellow-500",
+    description: "Transform & prepare",
+  },
+  {
+    step: 3,
+    title: "Data Analysis",
+    tool: "SQL",
+    icon: Database,
+    color: "bg-blue-500",
+    description: "Query & explore",
+  },
+  {
+    step: 4,
+    title: "Visualization",
+    tool: "Power BI",
+    icon: BarChart3,
+    color: "bg-amber-500",
+    description: "Interactive dashboard",
+  },
+  {
+    step: 5,
+    title: "Presentation",
+    tool: "PowerPoint",
+    icon: Presentation,
+    color: "bg-red-500",
+    description: "Final insights",
+  },
+];
+
+const webProjects = [
   {
     id: 2,
     name: "Restaurant_Menu.exe",
     client: "Gastrobar Lima",
     date: "October 2024",
-    description: "Sistema de menú digital interactivo para restaurante. Interfaz moderna con categorías dinámicas, imágenes de alta calidad y experiencia de usuario optimizada post-pandemia.",
+    description: "Sistema de menú digital interactivo para restaurante. Interfaz moderna con categorías dinámicas, imágenes de alta calidad y experiencia de usuario optimizada.",
     tech: ["HTML", "CSS", "JavaScript", "UI/UX"],
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
     hasDemo: true,
@@ -30,7 +63,7 @@ const projects = [
     name: "Consulting_Web.exe",
     client: "Business Consulting Firm",
     date: "September 2024",
-    description: "Website profesional para firma de consultoría empresarial. Enfoque en credibilidad corporativa, presentación de servicios y generación de leads calificados.",
+    description: "Website profesional para firma de consultoría empresarial. Enfoque en credibilidad corporativa, presentación de servicios y generación de leads.",
     tech: ["HTML", "CSS", "JavaScript", "SEO"],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
     hasDemo: false,
@@ -41,7 +74,7 @@ const projects = [
     name: "Fitness_Studio.exe",
     client: "PowerFit Gym",
     date: "August 2024",
-    description: "Landing page energética para estudio de fitness. Incluye horarios de clases, información de membresías y sistema de contacto directo con integración a WhatsApp.",
+    description: "Landing page energética para estudio de fitness. Incluye horarios de clases, información de membresías y sistema de contacto directo.",
     tech: ["HTML", "CSS", "JavaScript", "AI Tools"],
     image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop",
     hasDemo: true,
@@ -52,7 +85,7 @@ const projects = [
     name: "Local_Directory.exe",
     client: "Community Project",
     date: "July 2024",
-    description: "Directorio web para negocios locales de la comunidad. Plataforma que conecta comercios con clientes, incluyendo búsqueda por categorías y formularios de contacto.",
+    description: "Directorio web para negocios locales de la comunidad. Plataforma que conecta comercios con clientes, incluyendo búsqueda por categorías.",
     tech: ["HTML", "CSS", "JavaScript", "Forms"],
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
     hasDemo: true,
@@ -64,7 +97,6 @@ const techColors: Record<string, string> = {
   "HTML": "bg-orange-500/80 text-white",
   "CSS": "bg-blue-500/80 text-white",
   "JavaScript": "bg-yellow-500/80 text-black",
-  "Responsive": "bg-purple-500/80 text-white",
   "UI/UX": "bg-pink-500/80 text-white",
   "SEO": "bg-green-500/80 text-white",
   "AI Tools": "bg-cyan-500/80 text-white",
@@ -91,8 +123,113 @@ export default function Portfolio() {
           </p>
         </div>
 
+        {/* Featured Data Analytics Project */}
+        <div 
+          className="rounded-xl bg-card border border-border overflow-hidden mb-8"
+          data-testid="card-project-analytics"
+        >
+          <div className="p-8">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-3 h-3 rounded-full bg-purple-400" />
+              <Badge className="bg-purple-500/20 text-purple-400 border-purple-500/30 font-mono text-xs">
+                Featured Project
+              </Badge>
+            </div>
+            
+            <h3 className="font-mono text-2xl font-bold mb-2">Data_Analytics_Pipeline.exe</h3>
+            
+            <div className="space-y-1 mb-6 font-mono text-sm">
+              <p>
+                <span className="text-cyan-400">TYPE:</span>{" "}
+                <span className="text-primary">End-to-End Data Analysis</span>
+              </p>
+              <p>
+                <span className="text-green-400">STATUS:</span>{" "}
+                <span className="text-muted-foreground">Complete Workflow</span>
+              </p>
+            </div>
+            
+            <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">
+              A complete data analytics project showcasing the full pipeline from raw data collection 
+              to executive presentation. This project demonstrates proficiency in data manipulation, 
+              analysis, and visualization using industry-standard tools.
+            </p>
+
+            {/* Pipeline Flow */}
+            <div className="mb-8">
+              <p className="font-mono text-sm text-muted-foreground mb-6">{"// workflow_pipeline"}</p>
+              
+              <div className="flex flex-wrap items-center justify-center gap-2 md:gap-0">
+                {pipelineSteps.map((step, index) => (
+                  <div key={step.step} className="flex items-center">
+                    <div className="flex flex-col items-center">
+                      <div className={`w-16 h-16 md:w-20 md:h-20 rounded-xl ${step.color}/20 border-2 border-dashed ${step.color.replace('bg-', 'border-')}/50 flex items-center justify-center mb-3 relative`}>
+                        <step.icon className={`w-8 h-8 md:w-10 md:h-10 ${step.color.replace('bg-', 'text-')}`} />
+                        <span className="absolute -top-2 -left-2 w-6 h-6 rounded-full bg-background border border-border flex items-center justify-center text-xs font-mono font-bold">
+                          {step.step}
+                        </span>
+                      </div>
+                      <p className="font-mono text-xs font-medium text-center">{step.tool}</p>
+                      <p className="text-xs text-muted-foreground text-center hidden md:block">{step.description}</p>
+                    </div>
+                    
+                    {index < pipelineSteps.length - 1 && (
+                      <ArrowRight className="w-6 h-6 text-muted-foreground/50 mx-2 md:mx-4 flex-shrink-0" />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Tech Stack */}
+            <div className="flex flex-wrap gap-2 mb-6">
+              <Badge className="bg-green-600/80 text-white font-mono text-xs border-0">Excel</Badge>
+              <Badge className="bg-yellow-500/80 text-black font-mono text-xs border-0">Python</Badge>
+              <Badge className="bg-blue-600/80 text-white font-mono text-xs border-0">SQL</Badge>
+              <Badge className="bg-amber-500/80 text-white font-mono text-xs border-0">Power BI</Badge>
+              <Badge className="bg-red-500/80 text-white font-mono text-xs border-0">PowerPoint</Badge>
+            </div>
+
+            {/* Actions */}
+            <div className="flex flex-wrap gap-3">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="font-mono text-xs gap-2 bg-muted/50 border-border"
+              >
+                <Github className="w-3 h-3" />
+                ./view --github
+              </Button>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="font-mono text-xs gap-2 bg-muted/50 border-border"
+              >
+                <BarChart3 className="w-3 h-3" />
+                ./open --dashboard
+              </Button>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="font-mono text-xs gap-2 bg-muted/50 border-border"
+              >
+                <Presentation className="w-3 h-3" />
+                ./view --presentation
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="flex items-center gap-4 my-12">
+          <div className="flex-1 h-px bg-border" />
+          <span className="font-mono text-sm text-muted-foreground">{"// web_development_projects"}</span>
+          <div className="flex-1 h-px bg-border" />
+        </div>
+
+        {/* Web Development Projects */}
         <div className="space-y-8">
-          {projects.map((project) => (
+          {webProjects.map((project) => (
             <div 
               key={project.id}
               className="rounded-xl bg-card border border-border overflow-hidden hover:border-primary/30 transition-colors"
@@ -138,7 +275,7 @@ export default function Portfolio() {
                       <Button 
                         variant="outline" 
                         size="sm" 
-                        className="font-mono text-xs gap-2 bg-muted/50 border-border hover:bg-primary/20 hover:text-primary hover:border-primary/50"
+                        className="font-mono text-xs gap-2 bg-muted/50 border-border"
                       >
                         <ExternalLink className="w-3 h-3" />
                         ./deploy --live
@@ -148,7 +285,7 @@ export default function Portfolio() {
                       <Button 
                         variant="outline" 
                         size="sm" 
-                        className="font-mono text-xs gap-2 bg-muted/50 border-border hover:bg-primary/20 hover:text-primary hover:border-primary/50"
+                        className="font-mono text-xs gap-2 bg-muted/50 border-border"
                       >
                         <Play className="w-3 h-3" />
                         ./demo --video
@@ -168,23 +305,6 @@ export default function Portfolio() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-12 p-6 rounded-xl bg-card/50 border border-border">
-          <div className="font-mono text-xs text-muted-foreground/70">
-            <pre className="whitespace-pre-wrap">{`// project.config.ts
-export const workflowProcess = {
-  steps: [
-    "Initial meeting & requirements gathering",
-    "Design mockups & client approval", 
-    "Development with AI-assisted tools",
-    "Testing & quality assurance",
-    "Deployment with domain & hosting setup"
-  ],
-  avgDeliveryTime: "2-3 weeks",
-  satisfaction: "100%"
-};`}</pre>
-          </div>
         </div>
       </div>
     </div>
