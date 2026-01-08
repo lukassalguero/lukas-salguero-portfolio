@@ -2,7 +2,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Building2, Code2, FlaskConical, Award } from "lucide-react";
-import bcpTeamImage from "@assets/image_1767855533853.png";
+import bcpTeamImage1 from "@assets/image_1767855533853.png";
+import bcpTeamImage2 from "@assets/image_1767890527899.png";
 
 const experiences = [
   {
@@ -20,7 +21,7 @@ const experiences = [
       "Contributed to channel strategy by comparing POS and ATM performance to identify optimal investment allocation",
     ],
     skills: ["SQL", "Databricks", "Power BI", "Data Analysis"],
-    teamImage: bcpTeamImage,
+    teamImages: [bcpTeamImage1, bcpTeamImage2],
     certificateUrl: "#",
   },
   {
@@ -140,18 +141,25 @@ export default function Experience() {
                         )}
                       </div>
 
-                      {exp.teamImage && (
+                      {exp.teamImages && exp.teamImages.length > 0 && (
                         <aside className="md:w-44 lg:w-52 shrink-0 mx-auto md:mx-0 md:pt-2">
                           <div className="font-mono text-xs text-muted-foreground mb-2 text-center md:text-left">
                             <span className="text-cyan-400">{"// "}</span>Team
                           </div>
-                          <div className="rounded-lg overflow-hidden border border-border/50 bg-muted/20 shadow-sm">
-                            <img 
-                              src={exp.teamImage} 
-                              alt="BCP Team" 
-                              className="w-full h-auto object-cover max-w-[200px] md:max-w-none mx-auto"
-                              data-testid="img-bcp-team"
-                            />
+                          <div className="space-y-3">
+                            {exp.teamImages.map((img, idx) => (
+                              <div 
+                                key={idx}
+                                className="rounded-lg overflow-hidden border border-border/50 bg-muted/20 shadow-sm"
+                              >
+                                <img 
+                                  src={img} 
+                                  alt={`BCP Team ${idx + 1}`}
+                                  className="w-full h-auto object-cover max-w-[200px] md:max-w-none mx-auto"
+                                  data-testid={`img-bcp-team-${idx + 1}`}
+                                />
+                              </div>
+                            ))}
                           </div>
                         </aside>
                       )}
