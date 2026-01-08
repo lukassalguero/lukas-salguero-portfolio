@@ -218,9 +218,7 @@ export default function About() {
                 ))}
               </div>
 
-              <p className="font-mono text-xs text-muted-foreground/60 pt-2">
-                {currentHighlight.command} <span className="animate-pulse">_</span>
-              </p>
+              
             </div>
 
             <div className="relative bg-muted/10 flex items-center justify-center overflow-hidden">
