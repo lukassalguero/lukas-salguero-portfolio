@@ -1,16 +1,15 @@
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, Briefcase, Code, TrendingUp } from "lucide-react";
-import { SiPython, SiDatabricks, SiJavascript, SiHtml5, SiCss3, SiPostgresql } from "react-icons/si";
+import { CheckCircle, Briefcase, Code, TrendingUp, BarChart3, Zap } from "lucide-react";
+import { SiPython, SiDatabricks, SiPostgresql } from "react-icons/si";
 import profileImage from "@assets/FotoDePerfilNew_1767892057825.jpeg";
 
 const technologies = [
   { name: "Python", icon: SiPython, color: "text-yellow-400" },
   { name: "SQL", icon: SiPostgresql, color: "text-blue-400" },
   { name: "Databricks", icon: SiDatabricks, color: "text-red-500" },
-  { name: "JavaScript", icon: SiJavascript, color: "text-yellow-300" },
-  { name: "HTML5", icon: SiHtml5, color: "text-orange-500" },
-  { name: "CSS3", icon: SiCss3, color: "text-blue-500" },
+  { name: "Power BI", icon: BarChart3, color: "text-yellow-500" },
+  { name: "Power Automate", icon: Zap, color: "text-blue-500" },
 ];
 
 const stats = [
