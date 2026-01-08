@@ -30,6 +30,15 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <div className="min-h-screen bg-background text-foreground flex flex-col">
+          <div className="h-9 bg-[hsl(222,30%,12%)] border-b border-border flex items-center justify-between px-4">
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />
+              <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
+              <div className="w-3 h-3 rounded-full bg-[#27ca40]" />
+            </div>
+            <span className="font-mono text-sm text-muted-foreground">lukas-salguero-portfolio</span>
+            <span className="font-mono text-xs text-muted-foreground/60">~/portfolio/src/pages</span>
+          </div>
           <EditorTabs />
           <main className="flex-1 overflow-auto pb-12">
             <Router />
