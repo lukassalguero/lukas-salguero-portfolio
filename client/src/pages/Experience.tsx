@@ -131,12 +131,12 @@ export default function Experience() {
                               data-testid="link-certificate"
                             >
                               <Button 
-                                variant="ghost" 
+                                variant="default" 
                                 size="sm"
-                                className="gap-2 font-mono text-xs text-muted-foreground"
+                                className="gap-2 font-mono text-xs bg-primary/20 text-primary border border-primary/30"
                               >
                                 <Award className="w-3.5 h-3.5" />
-                                View Certificate
+                                open CERTIFICATE
                               </Button>
                             </a>
                           </div>
