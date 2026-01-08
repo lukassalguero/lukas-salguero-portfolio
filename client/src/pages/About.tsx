@@ -217,11 +217,11 @@ export default function About() {
               
             </div>
 
-            <div className="relative bg-muted/10 flex items-center justify-center overflow-hidden">
+            <div className="relative bg-muted/10 flex items-center justify-center p-4">
               <img
                 src={currentHighlight.image}
                 alt={currentHighlight.title}
-                className="w-full h-full min-h-[280px] max-h-[320px] object-cover object-center"
+                className="w-full h-full max-h-[300px] object-contain"
                 data-testid={`img-highlight-${currentHighlight.id}`}
               />
             </div>
