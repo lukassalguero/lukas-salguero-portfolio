@@ -136,7 +136,7 @@ export default function Portfolio() {
               </Badge>
             </div>
             
-            <h3 className="font-mono text-2xl font-bold mb-2">Data_Analytics_Pipeline.exe</h3>
+            <h3 className="font-mono text-2xl font-bold mb-2">Data_Analytics Project</h3>
             
             <div className="space-y-1 mb-6 font-mono text-sm">
               <p>
