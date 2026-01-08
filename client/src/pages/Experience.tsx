@@ -5,6 +5,7 @@ import { Building2, Code2, FlaskConical, Award } from "lucide-react";
 import bcpTeamImage1 from "@assets/image_1767855533853.png";
 import bcpTeamImage2 from "@assets/image_1767890527899.png";
 import innovalabTeamImage from "@assets/image_1767890798616.png";
+import freelanceImage from "@assets/image_1767891188314.png";
 
 const experiences = [
   {
@@ -38,6 +39,7 @@ const experiences = [
       "Managed full project cycle: client meetings, requirements gathering, development, and delivery with domain/hosting setup",
     ],
     skills: ["HTML", "CSS", "AI Tools", "Client Management"],
+    teamImages: [freelanceImage],
   },
   {
     id: 3,
