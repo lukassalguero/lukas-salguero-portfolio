@@ -26,7 +26,7 @@ const stats = [
 const highlights = [
   {
     id: 1,
-    category: "Academic expansion",
+    category: "Academic Education",
     code: {
       university: "Javeriana",
       city: "Bogota, Colombia",
@@ -34,7 +34,7 @@ const highlights = [
       impact: "cultural_growth",
     },
     title: "Academic Exchange",
-    description: "Academic exchange at Universidad Javeriana, Bogota - Colombia, expanding horizons and discovering new cultures.",
+    description: "Engineering student with a strong interest in problem-solving, data analysis, and understanding how technology supports better business decisions.",
     tags: ["Academic", "International", "Colombia"],
     image: highlightImage1,
     command: "./view_experience.sh",
@@ -183,7 +183,7 @@ export default function About() {
             <div className="p-6 space-y-4 flex flex-col justify-center">
               <div className="font-mono text-xs space-y-1">
                 <p className="text-muted-foreground/60">{"// "}{currentHighlight.category}</p>
-                <p><span className="text-purple-400">const</span> <span className="text-cyan-400">experience</span> <span className="text-muted-foreground">=</span> {"{"}</p>
+                <p><span className="text-purple-400">const</span> <span className="text-cyan-400">education</span> <span className="text-muted-foreground">=</span> {"{"}</p>
                 {Object.entries(currentHighlight.code).map(([key, value]) => (
                   <p key={key} className="pl-4">
                     <span className="text-cyan-400">"{key}"</span>
