@@ -149,7 +149,7 @@ export default function Portfolio() {
               </p>
             </div>
             
-            <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">Analytics project based on public data from a well-known Peruvian retail company, focused on understanding customer purchasing behavior and sales dynamics.                                                          The project delivers clear, business-oriented insights through an interactive dashboard and an executive-ready presentation, helping identify trends, customer segments, and opportunities to optimize commercial strategies.</p>
+            <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">Analytics project based on public data from a well-known Peruvian retail company, focused on understanding customer purchasing behavior and sales dynamics.                                                          It delivers clear, business-oriented insights through an interactive dashboard and an executive-ready presentation, helping identify trends, customer segments, and opportunities to optimize commercial strategies.</p>
 
             {/* Pipeline Flow */}
             <div className="mb-8">
