@@ -216,7 +216,7 @@ export default function Portfolio() {
                 className="font-mono text-xs gap-2 bg-muted/50 border-border"
                 asChild
               >
-                <a href="https://docs.google.com/presentation/d/e/2PACX-1vQIXB-GXgUsBm-lVM4e0C4w0d1fpZnmw9UqzGGttr0Ea3x1GJ0n8Nwnd2u3mK6vN0c1Vb7_bqrjcRdG/pub?start=false&loop=false&delayms=3000&slide=id.g3b5620f18ad_2_199" target="_blank" rel="noopener noreferrer">
+                <a href="https://docs.google.com/presentation/d/e/2PACX-1vQIXB-GXgUsBm-lVM4e0C4w0d1fpZnmw9UqzGGttr0Ea3x1GJ0n8Nwnd2u3mK6vN0c1Vb7_bqrjcRdG/pub?start=false&loop=false&delayms=3000" target="_blank" rel="noopener noreferrer">
                   <Presentation className="w-3 h-3" />
                   ./view --presentation
                 </a>
