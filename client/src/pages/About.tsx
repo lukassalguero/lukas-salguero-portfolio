@@ -45,8 +45,8 @@ const highlights = [
     code: {
       company: "BCP",
       role: "BI Intern",
-      year: 2025,
-      impact: "data_driven",
+      year: "Sep 2025 - Feb 2026",
+      area: "Alternative Channels",
     },
     title: "Business Intelligence",
     description: "Working with data analytics and business intelligence tools to drive strategic decisions at Peru's largest bank.",
