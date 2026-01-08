@@ -41,7 +41,7 @@ const highlights = [
   },
   {
     id: 2,
-    category: "Professional growth",
+    category: "Professional Experience",
     code: {
       company: "BCP",
       role: "BI Intern",
