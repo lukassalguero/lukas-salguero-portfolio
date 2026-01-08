@@ -153,7 +153,7 @@ export default function Portfolio() {
 
             {/* Pipeline Flow */}
             <div className="mb-8">
-              <p className="font-mono text-sm text-muted-foreground mb-6">{"// workflow_pipeline"}</p>
+              <p className="font-mono text-sm text-muted-foreground mb-6">{"// The project follows a clear end-to-end data workflow, illustrated below:"}</p>
               
               <div className="flex flex-wrap items-center justify-center gap-2 md:gap-0">
                 {pipelineSteps.map((step, index) => (
