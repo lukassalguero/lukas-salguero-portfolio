@@ -56,7 +56,7 @@ const highlights = [
   },
   {
     id: 3,
-    category: "Content creation",
+    category: "Sporting Feats",
     code: {
       platform: "Social Media",
       followers: "20k+",
