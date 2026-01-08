@@ -1,127 +1,188 @@
 import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
-import { ExternalLink, Globe, TrendingUp, Users, ShoppingBag, Briefcase } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Play } from "lucide-react";
 
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Landing Page",
-    description: "Built a conversion-focused landing page for a local retail business, improving their online presence and customer acquisition.",
-    tech: ["HTML", "CSS", "JavaScript", "AI Tools"],
-    impact: "40% increase in online inquiries",
-    icon: ShoppingBag,
-    color: "text-blue-400",
-    bgColor: "bg-blue-500/10",
+    name: "Ecommerce_Landing.exe",
+    client: "Local Retail Business",
+    date: "November 2024",
+    description: "Landing page desarrollada para un negocio de retail local, enfocada en conversiones y mejora de presencia digital. Diseño responsive con optimización para dispositivos móviles.",
+    tech: ["HTML", "CSS", "JavaScript", "Responsive"],
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+    hasDemo: true,
+    hasLive: true,
   },
   {
     id: 2,
-    title: "Restaurant Digital Menu",
-    description: "Developed an interactive digital menu system with modern UI, helping the restaurant adapt to post-pandemic dining preferences.",
-    tech: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-    impact: "Modernized customer experience",
-    icon: Users,
-    color: "text-green-400",
-    bgColor: "bg-green-500/10",
+    name: "Restaurant_Menu.exe",
+    client: "Gastrobar Lima",
+    date: "October 2024",
+    description: "Sistema de menú digital interactivo para restaurante. Interfaz moderna con categorías dinámicas, imágenes de alta calidad y experiencia de usuario optimizada post-pandemia.",
+    tech: ["HTML", "CSS", "JavaScript", "UI/UX"],
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
+    hasDemo: true,
+    hasLive: true,
   },
   {
     id: 3,
-    title: "Professional Services Website",
-    description: "Created a clean, professional website for a consulting firm focusing on credibility and service showcase.",
+    name: "Consulting_Web.exe",
+    client: "Business Consulting Firm",
+    date: "September 2024",
+    description: "Website profesional para firma de consultoría empresarial. Enfoque en credibilidad corporativa, presentación de servicios y generación de leads calificados.",
     tech: ["HTML", "CSS", "JavaScript", "SEO"],
-    impact: "Established online credibility",
-    icon: Briefcase,
-    color: "text-purple-400",
-    bgColor: "bg-purple-500/10",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+    hasDemo: false,
+    hasLive: true,
   },
   {
     id: 4,
-    title: "Fitness Studio Landing",
-    description: "Designed and developed an energetic landing page for a fitness studio with class schedules and membership information.",
-    tech: ["HTML", "CSS", "JavaScript", "AI-assisted"],
-    impact: "Streamlined membership signups",
-    icon: TrendingUp,
-    color: "text-orange-400",
-    bgColor: "bg-orange-500/10",
+    name: "Fitness_Studio.exe",
+    client: "PowerFit Gym",
+    date: "August 2024",
+    description: "Landing page energética para estudio de fitness. Incluye horarios de clases, información de membresías y sistema de contacto directo con integración a WhatsApp.",
+    tech: ["HTML", "CSS", "JavaScript", "AI Tools"],
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop",
+    hasDemo: true,
+    hasLive: true,
   },
   {
     id: 5,
-    title: "Local Business Directory",
-    description: "Built a directory website for local businesses in the community, helping customers find services easily.",
+    name: "Local_Directory.exe",
+    client: "Community Project",
+    date: "July 2024",
+    description: "Directorio web para negocios locales de la comunidad. Plataforma que conecta comercios con clientes, incluyendo búsqueda por categorías y formularios de contacto.",
     tech: ["HTML", "CSS", "JavaScript", "Forms"],
-    impact: "Connected local businesses with customers",
-    icon: Globe,
-    color: "text-cyan-400",
-    bgColor: "bg-cyan-500/10",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
+    hasDemo: true,
+    hasLive: false,
   },
 ];
 
+const techColors: Record<string, string> = {
+  "HTML": "bg-orange-500/80 text-white",
+  "CSS": "bg-blue-500/80 text-white",
+  "JavaScript": "bg-yellow-500/80 text-black",
+  "Responsive": "bg-purple-500/80 text-white",
+  "UI/UX": "bg-pink-500/80 text-white",
+  "SEO": "bg-green-500/80 text-white",
+  "AI Tools": "bg-cyan-500/80 text-white",
+  "Forms": "bg-indigo-500/80 text-white",
+};
+
 export default function Portfolio() {
   return (
-    <div className="min-h-[calc(100vh-100px)] py-12 px-4">
+    <div className="min-h-[calc(100vh-100px)] py-12 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
-        <div className="font-mono text-muted-foreground text-sm mb-4">
-          <span className="text-cyan-400">{"// "}</span>Portfolio
-        </div>
-        
-        <div className="mb-12">
-          <h1 className="text-4xl font-bold mb-4">Featured Projects</h1>
-          <p className="text-lg text-muted-foreground max-w-2xl">
-            A selection of websites and landing pages built for local businesses, 
-            focusing on clear structure, business impact, and improved digital presence.
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 font-mono text-sm text-muted-foreground mb-6">
+            <span className="text-green-400">lukas@portfolio:</span>
+            <span className="text-blue-400">~/projects$</span>
+            <span>ls -la --projects</span>
+          </div>
+          
+          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+            <span className="text-muted-foreground"># </span>Projects
+          </h1>
+          
+          <p className="font-mono text-muted-foreground text-lg">
+            {"// Innovative solutions that transform ideas into reality"}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="space-y-8">
           {projects.map((project) => (
-            <Card 
+            <div 
               key={project.id}
-              className="group p-6 bg-card/50 border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-0.5"
+              className="rounded-xl bg-card border border-border overflow-hidden hover:border-primary/30 transition-colors"
               data-testid={`card-project-${project.id}`}
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className={`p-3 rounded-lg ${project.bgColor}`}>
-                  <project.icon className={`w-6 h-6 ${project.color}`} />
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="p-8 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="w-3 h-3 rounded-full bg-cyan-400" />
+                      <h3 className="font-mono text-xl font-bold">{project.name}</h3>
+                    </div>
+                    
+                    <div className="space-y-1 mb-6 font-mono text-sm">
+                      <p>
+                        <span className="text-cyan-400">CLIENT:</span>{" "}
+                        <span className="text-primary">{project.client}</span>
+                      </p>
+                      <p>
+                        <span className="text-green-400">DATE:</span>{" "}
+                        <span className="text-muted-foreground">{project.date}</span>
+                      </p>
+                    </div>
+                    
+                    <p className="text-muted-foreground leading-relaxed mb-6">
+                      {project.description}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {project.tech.map((tech) => (
+                        <Badge 
+                          key={tech}
+                          className={`${techColors[tech] || "bg-gray-500/80 text-white"} font-mono text-xs border-0`}
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-3">
+                    {project.hasLive && (
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="font-mono text-xs gap-2 bg-muted/50 border-border hover:bg-primary/20 hover:text-primary hover:border-primary/50"
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        ./deploy --live
+                      </Button>
+                    )}
+                    {project.hasDemo && (
+                      <Button 
+                        variant="outline" 
+                        size="sm" 
+                        className="font-mono text-xs gap-2 bg-muted/50 border-border hover:bg-primary/20 hover:text-primary hover:border-primary/50"
+                      >
+                        <Play className="w-3 h-3" />
+                        ./demo --video
+                      </Button>
+                    )}
+                  </div>
                 </div>
-                <ExternalLink className="w-5 h-5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                
+                <div className="relative h-64 md:h-auto overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={`${project.name} preview`}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-card/80 hidden md:block" />
+                </div>
               </div>
-
-              <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-              <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                {project.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tech.map((tech) => (
-                  <Badge 
-                    key={tech}
-                    variant="secondary"
-                    className="bg-primary/10 text-primary border-primary/20 font-mono text-xs"
-                  >
-                    {tech}
-                  </Badge>
-                ))}
-              </div>
-
-              <div className="flex items-center gap-2 pt-4 border-t border-border">
-                <TrendingUp className="w-4 h-4 text-green-400" />
-                <span className="text-sm text-green-400">{project.impact}</span>
-              </div>
-            </Card>
+            </div>
           ))}
         </div>
 
-        <div className="mt-12 p-6 rounded-lg bg-card/50 border border-border">
-          <div className="font-mono text-xs text-muted-foreground/50">
-            <pre>{`// project.config.ts
-export const projectApproach = {
-  process: [
-    "Client meeting & requirements gathering",
-    "Design & development",
-    "Testing & refinement",
+        <div className="mt-12 p-6 rounded-xl bg-card/50 border border-border">
+          <div className="font-mono text-xs text-muted-foreground/70">
+            <pre className="whitespace-pre-wrap">{`// project.config.ts
+export const workflowProcess = {
+  steps: [
+    "Initial meeting & requirements gathering",
+    "Design mockups & client approval", 
+    "Development with AI-assisted tools",
+    "Testing & quality assurance",
     "Deployment with domain & hosting setup"
   ],
-  tools: ["HTML", "CSS", "JavaScript", "AI-assisted development"],
-  focus: "Business impact and clarity"
+  avgDeliveryTime: "2-3 weeks",
+  satisfaction: "100%"
 };`}</pre>
           </div>
         </div>
