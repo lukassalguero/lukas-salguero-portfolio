@@ -192,25 +192,34 @@ export default function Portfolio() {
                 variant="outline" 
                 size="sm" 
                 className="font-mono text-xs gap-2 bg-muted/50 border-border"
+                asChild
               >
-                <Github className="w-3 h-3" />
-                ./view --github
+                <a href="https://github.com/lukassalguero/analyticsProject" target="_blank" rel="noopener noreferrer">
+                  <Github className="w-3 h-3" />
+                  ./view --github
+                </a>
               </Button>
               <Button 
                 variant="outline" 
                 size="sm" 
                 className="font-mono text-xs gap-2 bg-muted/50 border-border"
+                asChild
               >
-                <BarChart3 className="w-3 h-3" />
-                ./open --dashboard
+                <a href="https://raw.githubusercontent.com/lukassalguero/analyticsProject/refs/heads/main/CustomerBehavior_DashBoard.png" target="_blank" rel="noopener noreferrer">
+                  <BarChart3 className="w-3 h-3" />
+                  ./open --dashboard
+                </a>
               </Button>
               <Button 
                 variant="outline" 
                 size="sm" 
                 className="font-mono text-xs gap-2 bg-muted/50 border-border"
+                asChild
               >
-                <Presentation className="w-3 h-3" />
-                ./view --presentation
+                <a href="https://docs.google.com/presentation/d/e/2PACX-1vQIXB-GXgUsBm-lVM4e0C4w0d1fpZnmw9UqzGGttr0Ea3x1GJ0n8Nwnd2u3mK6vN0c1Vb7_bqrjcRdG/pub?start=false&loop=false&delayms=3000&slide=id.g3b5620f18ad_2_199" target="_blank" rel="noopener noreferrer">
+                  <Presentation className="w-3 h-3" />
+                  ./view --presentation
+                </a>
               </Button>
             </div>
           </div>
