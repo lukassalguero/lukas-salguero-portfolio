@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, GraduationCap, Briefcase, Code, TrendingUp } from "lucide-react";
+import { CheckCircle, Briefcase, Code, TrendingUp } from "lucide-react";
 import { SiPython, SiDatabricks, SiJavascript, SiHtml5, SiCss3, SiPostgresql } from "react-icons/si";
 import profileImage from "@assets/FotoDePerfilNew_1767892057825.jpeg";
 
@@ -15,8 +15,8 @@ const technologies = [
 
 const stats = [
   { value: "20k+", label: "Social Media Followers", icon: TrendingUp },
-  { value: "3+", label: "Years Coding", icon: Code },
-  { value: "10+", label: "Projects Completed", icon: Briefcase },
+  { value: "1+", label: "Years Industrial Experience", icon: Briefcase },
+  { value: "5", label: "Projects Completed", icon: Code },
 ];
 
 export default function About() {
@@ -106,18 +106,6 @@ export default function About() {
                 ))}
               </div>
             </div>
-
-            <Card className="p-4 bg-card/50 border-border">
-              <div className="flex items-start gap-3">
-                <div className="p-2 rounded-lg bg-primary/10">
-                  <GraduationCap className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold">Industrial Engineering</h4>
-                  <p className="text-sm text-muted-foreground">PUCP - 2022 to Present</p>
-                </div>
-              </div>
-            </Card>
           </div>
         </div>
 
