@@ -49,9 +49,9 @@ const pipelineSteps = [
 const webProjects = [
   {
     id: 2,
-    name: "Kickboxing_School.exe",
+    name: "Kickboxing_School - WebSite",
     client: "Sarria Kickboxing Center",
-    date: "October 2024",
+    date: "December 2024",
     description: "A complete website for a Kickboxing school, designed to promote the sport and support its digital growth in Peru. The site includes information about classes, trainers, and a contact system for new students.",
     tech: ["HTML", "CSS", "JavaScript", "UI/UX"],
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
