@@ -77,9 +77,7 @@ export default function Experience() {
 
         <div className="mb-12">
           <h1 className="text-4xl font-bold mb-4">Professional Experience</h1>
-          <p className="text-lg text-muted-foreground">
-            My journey in Business Intelligence, data analysis, and web development.
-          </p>
+          <p className="text-lg text-muted-foreground">My professional journey in business and technology.</p>
         </div>
 
         <div className="relative">
