@@ -2,6 +2,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Play, FileSpreadsheet, Code2, Database, BarChart3, Presentation, ArrowRight, Github } from "lucide-react";
 import { SiPython, SiPowerbi } from "react-icons/si";
+import kickboxingImage from "@assets/image_1767853381689.png";
+import bypImage from "@assets/image_1767853449347.png";
+import mirandaImage from "@assets/image_1767853503776.png";
 
 const pipelineSteps = [
   {
@@ -54,7 +57,7 @@ const webProjects = [
     date: "March 2025",
     description: "A complete website for a Kickboxing school, designed to promote the sport and support its digital growth in Peru. The site includes information about classes, trainers, and a contact system for new students.",
     tech: ["HTML", "CSS", "JavaScript", "AI Tools"],
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
+    image: kickboxingImage,
     hasDemo: false,
     hasLive: true,
     liveUrl: "https://skc-react-agzc.vercel.app/",
@@ -66,7 +69,7 @@ const webProjects = [
     date: "January 2025",
     description: "Corporate website for B&P Abogados, a law firm specialized in education law, with extensive experience advising universities, institutes, and schools.",
     tech: ["HTML", "CSS"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+    image: bypImage,
     hasDemo: false,
     hasLive: true,
     liveUrl: "https://www.bypabogados.com/",
@@ -78,7 +81,7 @@ const webProjects = [
     date: "December 2024",
     description: "Institutional website for a Peruvian law firm, designed to convey credibility and professional excellence. The platform presents the firm's culture, expertise, and legal team through a clean and structured layout.",
     tech: ["HTML", "CSS"],
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop",
+    image: mirandaImage,
     hasDemo: false,
     hasLive: true,
     liveUrl: "https://mafirma.pe/es/firma",
