@@ -76,7 +76,7 @@ const webProjects = [
     name: "Miranda&Amado_Abogados - WEBSITE",
     client: "Miranda&Amado_Abogados",
     date: "December 2024",
-    description: "Institutional website for a Peruvian law firm, designed to communicate its institutional identity, professional standards, and long-term commitment to clients. The platform highlights the firm's culture and legal expertise in a clear and structured way.",
+    description: "Institutional website for a Peruvian law firm, designed to convey credibility and professional excellence. The platform presents the firm's culture, expertise, and legal team through a clean and structured layout.",
     tech: ["HTML", "CSS", "AI Tools"],
     image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop",
     hasDemo: false,
