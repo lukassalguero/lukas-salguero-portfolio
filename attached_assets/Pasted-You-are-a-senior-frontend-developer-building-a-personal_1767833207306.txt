@@ -1,0 +1,95 @@
+You are a senior frontend developer building a personal portfolio website for a professional focused on AI, Business, Automation, and Web Development.
+Use the following CV information (I attached) as the main source of content and adapt it naturally for the website. You may slightly enhance wording if needed, but keep it realistic and professional.
+
+🔹 GENERAL
+
+Language: ENGLISH
+
+Style: AI + Business
+
+Tone: professional, clear, results-oriented
+
+Website type: multi-page (NOT one-page)
+
+🔹 STRUCTURE (MANDATORY – like a code editor)
+
+Top navigation styled as editor tabs:
+
+index.tsx | about.tsx | portfolio.tsx | experience.tsx | contact.tsx
+
+
+Each tab links to a separate page.
+
+Persistent bottom terminal-style bar showing messages related to automation, AI, and execution (e.g. “AI workflows running”, “Projects deployed successfully”).
+
+🔹 VISUAL STYLE
+
+Dark theme (near-black / dark navy)
+
+Accent colors: electric blue / cyan (AI feel)
+
+Clean, minimal, business-oriented
+
+Monospace font for navigation, clean sans-serif for content
+
+🔹 PAGE CONTENT (USE CV DATA)
+
+index.tsx (Home)
+
+Name: Lukas Salguero
+
+Title: AI & Business Automation | Web Developer
+
+Short value proposition focused on building intelligent, business-driven digital solutions.
+
+about.tsx (About)
+
+Industrial Engineering student at PUCP
+
+Interest in AI, data, automation, and business optimization
+
+Focus on turning data and processes into practical solutions.
+
+portfolio.tsx (Portfolio)
+
+Showcase 5 landing pages / websites built for clients
+
+Each project: short description + tech used (HTML, CSS, JS, AI tools)
+
+Emphasize business impact and clarity.
+
+experience.tsx (Experience)
+Include these 4 experiences:
+
+Business Intelligence Intern – BCP
+
+Freelance Web Developer
+
+Data Analytics Intern – InnovaLab
+
+Work and Travel Program
+
+Highlight skills, tools, and impact (not long paragraphs).
+
+contact.tsx (Contact)
+
+Email, LinkedIn, GitHub
+
+Simple professional call to action.
+
+🔹 TECH
+
+React + TypeScript
+
+Clean component structure
+
+Responsive
+
+Professional, readable code
+
+🔹 GOAL
+
+The website should feel like:
+
+“A business-minded AI professional working inside a developer environment.”
+Iam sending you an URL that I want you to inspire of it and take it as a reference: https://mathiaskunimoto.com/
