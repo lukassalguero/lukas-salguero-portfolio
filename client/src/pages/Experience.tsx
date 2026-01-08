@@ -11,7 +11,7 @@ const experiences = [
     id: 1,
     role: "Business Intelligence Intern",
     company: "BCP (Alternative Channels Area)",
-    period: "May 2025 - January 2026",
+    period: "September 2025 - February 2026",
     icon: Building2,
     color: "text-blue-400",
     bgColor: "bg-blue-500/10",
