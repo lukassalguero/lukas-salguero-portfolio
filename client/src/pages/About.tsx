@@ -49,7 +49,7 @@ const highlights = [
       area: "Alternative Channels",
     },
     title: "Business Intelligence",
-    description: "Working with data analytics and business intelligence tools to drive strategic decisions at Peru's largest bank.",
+    description: "Analyzing ATM and POS operations, transforming performance data into actionable insights. Supported decision-making by identifying patterns, inefficiencies, and opportunities to improve channels performance through data analysis.",
     tags: ["Data", "Analytics", "Banking"],
     image: highlightImage2,
     command: "./view_career.sh",
