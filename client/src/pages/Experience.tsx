@@ -28,7 +28,7 @@ const experiences = [
     color: "text-green-400",
     bgColor: "bg-green-500/10",
     highlights: [
-      "Built functional websites for small local businesses, focusing on clear structure to improve their digital presence using HTML, CSS and AI tools to speed up development and solve technical tasks more efficiently.",
+      "Built functional websites for small businesses, focused on clear structure and strong digital presence. Developed using HTML, CSS, and AI tools to deliver faster and more efficient solutions.",
       "Managed full project cycle: client meetings, requirements gathering, development, and delivery with domain/hosting setup",
     ],
     skills: ["HTML", "CSS", "JavaScript", "AI Tools", "Client Management"],
