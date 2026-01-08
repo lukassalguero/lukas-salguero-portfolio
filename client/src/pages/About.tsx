@@ -56,7 +56,7 @@ const highlights = [
   },
   {
     id: 3,
-    category: "Sporting Feats",
+    category: "Sporting Achievements",
     code: {
       title: "Federation Football Player",
       club: "Aelu",
