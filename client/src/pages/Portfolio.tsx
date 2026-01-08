@@ -194,9 +194,31 @@ export default function Portfolio() {
                 className="font-mono text-xs gap-2 bg-muted/50 border-border"
                 asChild
               >
-                <a href="https://github.com/lukassalguero/analyticsProject" target="_blank" rel="noopener noreferrer">
-                  <Github className="w-3 h-3" />
-                  open - GITHUB
+                <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQCour3YM_DTQ1dMtJx7cVpOA103HftiQ5CntQpGFqyVV3EWjA6uh4FVou-AZyP5IBHEQXANZ2EpCoj/pubhtml?gid=511207772&single=true" target="_blank" rel="noopener noreferrer">
+                  <FileSpreadsheet className="w-3 h-3" />
+                  open - CSV
+                </a>
+              </Button>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="font-mono text-xs gap-2 bg-muted/50 border-border"
+                asChild
+              >
+                <a href="https://nbviewer.org/github/lukassalguero/analyticsProject/blob/main/Customer_Shopping_Behavior_Analysis.ipynb" target="_blank" rel="noopener noreferrer">
+                  <Code2 className="w-3 h-3" />
+                  open - PYTHON
+                </a>
+              </Button>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="font-mono text-xs gap-2 bg-muted/50 border-border"
+                asChild
+              >
+                <a href="https://raw.githubusercontent.com/lukassalguero/analyticsProject/refs/heads/main/customer_behavior_sql_queries.sql" target="_blank" rel="noopener noreferrer">
+                  <Database className="w-3 h-3" />
+                  open - SQL
                 </a>
               </Button>
               <Button 
