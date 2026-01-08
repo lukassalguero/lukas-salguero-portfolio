@@ -17,7 +17,7 @@ const experiences = [
       "Proposed initiative to automate ATM incident reporting, centralizing incidents in real-time dashboard to reduce manual work",
       "Contributed to channel strategy by comparing POS and ATM performance to identify optimal investment allocation",
     ],
-    skills: ["SQL", "Databricks", "Power BI", "Data Analysis", "Dashboard Design"],
+    skills: ["SQL", "Databricks", "Power BI", "Data Analysis"],
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const experiences = [
       "Built functional websites for small businesses, focused on clear structure and strong digital presence. Developed using HTML, CSS, and AI tools to deliver faster and more efficient solutions.",
       "Managed full project cycle: client meetings, requirements gathering, development, and delivery with domain/hosting setup",
     ],
-    skills: ["HTML", "CSS", "JavaScript", "AI Tools", "Client Management"],
+    skills: ["HTML", "CSS", "AI Tools", "Client Management"],
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const experiences = [
       "Participated in university-led engineering project supporting a public healthcare center",
       "Created SQL queries to extract and segment patient data by demographic groups, service type, enabling deeper comparisons. And performed data cleaning using Python (Pandas).",
     ],
-    skills: ["SQL", "Python", "Pandas", "Data Cleaning", "Healthcare Analytics"],
+    skills: ["SQL", "Python"],
   },
 ];
 
