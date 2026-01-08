@@ -119,12 +119,12 @@ export default function About() {
                 data analysis, and process optimization.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I'm also a <span className="text-primary">content creator</span> with 20k+ followers, sharing 
-                insights about engineering and student life. I enjoy turning complex information into clear 
-                insights and building simple digital solutions.
+                I'm deeply interested in the intersection of <span className="text-primary">business and technology</span>, 
+                especially how data and digital tools can drive better decision-making and operational efficiency. 
+                I enjoy turning complex problems into clear insights and building practical solutions.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Interested in joining companies expanding into <span className="text-cyan-400">LATAM</span>, 
+                I'm interested in joining companies expanding into <span className="text-cyan-400">LATAM</span>, 
                 where I can learn fast, take ownership early, and contribute with analytical thinking and creativity.
               </p>
             </div>
