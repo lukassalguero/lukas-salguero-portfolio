@@ -56,14 +56,14 @@ const highlights = [
   },
   {
     id: 3,
-    category: "Sporting Achievements",
+    category: "Sport Achievements",
     code: {
       title: "Federation Football Player",
       club: "Aelu",
       year: "2020",
       skills: "Team work and Discipline",
     },
-    title: "Content Creator",
+    title: "Football Career",
     description: "Played in Copa Federación with club AELU until the age of 16, growing through competitive football while developing discipline, teamwork, and a strong passion for the sport.",
     tags: [],
     image: highlightImage3,
