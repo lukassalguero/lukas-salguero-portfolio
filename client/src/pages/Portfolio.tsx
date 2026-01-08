@@ -149,12 +149,7 @@ export default function Portfolio() {
               </p>
             </div>
             
-            <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">end-to-end data analytics project based on public data inspired by a leading Peruvian retail company. The project focuses on understanding consumer shopping behavior across product categories, channels, and seasons to support better business decisions.
-
-            Using Python and SQL, raw transactional data was cleaned, transformed, and analyzed to uncover key purchasing patterns and customer segments. Insights were then translated into an interactive Power BI dashboard, allowing stakeholders to explore trends, KPIs, and drivers of sales performance. The project concludes with an executive-style presentation that connects data insights to actionable business recommendations.
-
-            This project showcases the ability to bridge data analytics and business strategy in a real-world retail context.
-</p>
+            <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">Analytics project based on public data from a well-known Peruvian retail company, focused on understanding customer purchasing behavior and sales dynamics.                                                          The project delivers clear, business-oriented insights through an interactive dashboard and an executive-ready presentation, helping identify trends, customer segments, and opportunities to optimize commercial strategies.</p>
 
             {/* Pipeline Flow */}
             <div className="mb-8">
