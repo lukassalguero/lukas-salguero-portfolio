@@ -182,10 +182,10 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-0 min-h-[360px]">
             <div className="p-6 space-y-4 flex flex-col justify-center">
               <div className="font-mono text-xs space-y-1">
-                <p className="text-muted-foreground/60">{"// "}{currentHighlight.category}</p>
+                <p className="text-muted-foreground/60 text-[14px]">{"// "}{currentHighlight.category}</p>
                 <p><span className="text-purple-400">const</span> <span className="text-cyan-400">education</span> <span className="text-muted-foreground">=</span> {"{"}</p>
                 {Object.entries(currentHighlight.code).map(([key, value]) => (
-                  <p key={key} className="pl-4">
+                  <p key={key} className="pl-4 text-[13px]">
                     <span className="text-cyan-400">"{key}"</span>
                     <span className="text-muted-foreground">: </span>
                     <span className={typeof value === "number" ? "text-orange-400" : "text-green-400"}>
