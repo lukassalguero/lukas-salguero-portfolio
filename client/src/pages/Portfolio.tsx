@@ -55,8 +55,9 @@ const webProjects = [
     description: "A complete website for a Kickboxing school, designed to promote the sport and support its digital growth in Peru. The site includes information about classes, trainers, and a contact system for new students.",
     tech: ["HTML", "CSS", "JavaScript", "UI/UX"],
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
-    hasDemo: true,
+    hasDemo: false,
     hasLive: true,
+    liveUrl: "https://skc-react-agzc.vercel.app/",
   },
   {
     id: 3,
@@ -303,9 +304,12 @@ export default function Portfolio() {
                         variant="outline" 
                         size="sm" 
                         className="font-mono text-xs gap-2 bg-muted/50 border-border"
+                        asChild
                       >
-                        <ExternalLink className="w-3 h-3" />
-                        ./deploy --live
+                        <a href={project.liveUrl || "#"} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-3 h-3" />
+                          open - WEBSITE
+                        </a>
                       </Button>
                     )}
                     {project.hasDemo && (
