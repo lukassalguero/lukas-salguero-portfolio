@@ -80,80 +80,82 @@ export default function Experience() {
                   </div>
 
                   <Card className="p-6 bg-card/50 border-border">
-                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
-                      <div>
-                        <h3 className="text-xl font-semibold">{exp.role}</h3>
-                        <p className="text-primary">{exp.company}</p>
-                      </div>
-                      <Badge 
-                        variant="secondary" 
-                        className="w-fit bg-muted text-muted-foreground font-mono text-xs"
-                      >
-                        {exp.period}
-                      </Badge>
-                    </div>
-
-                    <div className="space-y-3 mb-6">
-                      {exp.highlights.map((highlight, index) => (
-                        <div 
-                          key={index} 
-                          className="flex items-start gap-3 p-3 rounded-lg bg-muted/30 border border-border/50"
-                        >
-                          <span className="text-primary font-mono text-sm mt-0.5">{">"}</span>
-                          <p className="text-sm text-muted-foreground leading-relaxed">{highlight}</p>
+                    <div className="flex flex-col md:flex-row gap-6">
+                      <div className="flex-1 min-w-0">
+                        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
+                          <div>
+                            <h3 className="text-xl font-semibold">{exp.role}</h3>
+                            <p className="text-primary">{exp.company}</p>
+                          </div>
+                          <Badge 
+                            variant="secondary" 
+                            className="w-fit bg-muted text-muted-foreground font-mono text-xs"
+                          >
+                            {exp.period}
+                          </Badge>
                         </div>
-                      ))}
-                    </div>
 
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {exp.skills.map((skill) => (
-                        <Badge 
-                          key={skill}
-                          variant="secondary"
-                          className="bg-primary/10 text-primary border-primary/20 font-mono text-xs"
-                        >
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
+                        <div className="space-y-3 mb-6">
+                          {exp.highlights.map((highlight, index) => (
+                            <div 
+                              key={index} 
+                              className="flex items-start gap-3 p-3 rounded-lg bg-muted/30 border border-border/50"
+                            >
+                              <span className="text-primary font-mono text-sm mt-0.5">{">"}</span>
+                              <p className="text-sm text-muted-foreground leading-relaxed">{highlight}</p>
+                            </div>
+                          ))}
+                        </div>
 
-                    {(exp.teamImage || exp.certificateUrl) && (
-                      <div className="pt-4 border-t border-border/50 space-y-4">
-                        {exp.teamImage && (
-                          <div className="relative">
-                            <div className="font-mono text-xs text-muted-foreground mb-2">
-                              <span className="text-cyan-400">{"// "}</span>With the team
-                            </div>
-                            <div className="relative rounded-lg overflow-hidden border border-border/50">
-                              <img 
-                                src={exp.teamImage} 
-                                alt="BCP Team" 
-                                className="w-full max-w-md h-auto object-cover"
-                                data-testid="img-bcp-team"
-                              />
-                            </div>
+                        <div className="flex flex-wrap gap-2">
+                          {exp.skills.map((skill) => (
+                            <Badge 
+                              key={skill}
+                              variant="secondary"
+                              className="bg-primary/10 text-primary border-primary/20 font-mono text-xs"
+                            >
+                              {skill}
+                            </Badge>
+                          ))}
+                        </div>
+
+                        {exp.certificateUrl && (
+                          <div className="mt-4 pt-4 border-t border-border/50">
+                            <a
+                              href={exp.certificateUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              data-testid="link-certificate"
+                            >
+                              <Button 
+                                variant="ghost" 
+                                size="sm"
+                                className="gap-2 font-mono text-xs text-muted-foreground"
+                              >
+                                <Award className="w-3.5 h-3.5" />
+                                View Certificate
+                              </Button>
+                            </a>
                           </div>
                         )}
-                        
-                        {exp.certificateUrl && (
-                          <a
-                            href={exp.certificateUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-testid="link-certificate"
-                          >
-                            <Button 
-                              variant="ghost" 
-                              size="sm"
-                              className="gap-2 font-mono text-xs text-muted-foreground"
-                            >
-                              <Award className="w-3.5 h-3.5" />
-                              View Certificate
-                            </Button>
-                          </a>
-                        )}
                       </div>
-                    )}
+
+                      {exp.teamImage && (
+                        <aside className="md:w-44 lg:w-52 shrink-0 mx-auto md:mx-0 md:pt-2">
+                          <div className="font-mono text-xs text-muted-foreground mb-2 text-center md:text-left">
+                            <span className="text-cyan-400">{"// "}</span>Team
+                          </div>
+                          <div className="rounded-lg overflow-hidden border border-border/50 bg-muted/20 shadow-sm">
+                            <img 
+                              src={exp.teamImage} 
+                              alt="BCP Team" 
+                              className="w-full h-auto object-cover max-w-[200px] md:max-w-none mx-auto"
+                              data-testid="img-bcp-team"
+                            />
+                          </div>
+                        </aside>
+                      )}
+                    </div>
                   </Card>
                 </div>
               </div>
