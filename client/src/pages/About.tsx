@@ -6,6 +6,8 @@ import { CheckCircle, Briefcase, Code, TrendingUp, BarChart3, Zap, ChevronLeft, 
 import { SiPython, SiDatabricks, SiPostgresql } from "react-icons/si";
 import profileImage from "@assets/FotoDePerfilNew_1767892057825.jpeg";
 import highlightImage1 from "@assets/WhatsApp_Image_2026-01-08_at_12.30.17_PM_(1)_1767893932207.jpeg";
+import highlightImage2 from "@assets/WhatsApp_Image_2026-01-08_at_12.28.19_PM_1767894027137.jpeg";
+import highlightImage3 from "@assets/WhatsApp_Image_2026-01-08_at_12.28.19_PM_1767894074581.jpeg";
 
 const technologies = [
   { name: "Python", icon: SiPython, color: "text-yellow-400" },
@@ -49,7 +51,7 @@ const highlights = [
     title: "Business Intelligence",
     description: "Working with data analytics and business intelligence tools to drive strategic decisions at Peru's largest bank.",
     tags: ["Data", "Analytics", "Banking"],
-    image: profileImage,
+    image: highlightImage2,
     command: "./view_career.sh",
   },
   {
@@ -64,7 +66,7 @@ const highlights = [
     title: "Content Creator",
     description: "Sharing insights about engineering, student life, and professional development with a growing community.",
     tags: ["Creator", "Engineering", "Community"],
-    image: profileImage,
+    image: highlightImage3,
     command: "./view_content.sh",
   },
 ];
