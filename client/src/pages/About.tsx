@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, Briefcase, Code, TrendingUp, BarChart3, Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { CheckCircle, Briefcase, Code, TrendingUp, BarChart3, Zap, ChevronLeft, ChevronRight } from "lucide-react";
 import { SiPython, SiDatabricks, SiPostgresql } from "react-icons/si";
 import profileImage from "@assets/FotoDePerfilNew_1767892057825.jpeg";
+import highlightImage1 from "@assets/image_1767892839205.png";
 
 const technologies = [
   { name: "Python", icon: SiPython, color: "text-yellow-400" },
@@ -18,7 +21,67 @@ const stats = [
   { value: "5", label: "Projects Completed", icon: Code },
 ];
 
+const highlights = [
+  {
+    id: 1,
+    category: "Academic expansion",
+    code: {
+      university: "Javeriana",
+      city: "Bogota, Colombia",
+      year: 2023,
+      impact: "cultural_growth",
+    },
+    title: "Academic Exchange",
+    description: "Academic exchange at Universidad Javeriana, Bogota - Colombia, expanding horizons and discovering new cultures.",
+    tags: ["Academic", "International", "Colombia"],
+    image: highlightImage1,
+    command: "./view_experience.sh",
+  },
+  {
+    id: 2,
+    category: "Professional growth",
+    code: {
+      company: "BCP",
+      role: "BI Intern",
+      year: 2025,
+      impact: "data_driven",
+    },
+    title: "Business Intelligence",
+    description: "Working with data analytics and business intelligence tools to drive strategic decisions at Peru's largest bank.",
+    tags: ["Data", "Analytics", "Banking"],
+    image: profileImage,
+    command: "./view_career.sh",
+  },
+  {
+    id: 3,
+    category: "Content creation",
+    code: {
+      platform: "Social Media",
+      followers: "20k+",
+      year: 2024,
+      impact: "community_building",
+    },
+    title: "Content Creator",
+    description: "Sharing insights about engineering, student life, and professional development with a growing community.",
+    tags: ["Creator", "Engineering", "Community"],
+    image: profileImage,
+    command: "./view_content.sh",
+  },
+];
+
 export default function About() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % highlights.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + highlights.length) % highlights.length);
+  };
+
+  const currentHighlight = highlights[currentSlide];
+
   return (
     <div className="min-h-[calc(100vh-100px)] py-12 px-4">
       <div className="max-w-5xl mx-auto">
@@ -66,7 +129,7 @@ export default function About() {
 
             <div>
               <h3 className="font-mono text-sm text-cyan-400 mb-4">{"// "}Technologies</h3>
-              <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
+              <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
                 {technologies.map((tech) => (
                   <Card 
                     key={tech.name}
@@ -93,7 +156,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="mt-12 font-mono text-sm text-muted-foreground p-6 bg-muted/20 rounded-lg border border-border/50">
+        <div className="mt-12 font-mono text-sm text-muted-foreground p-4 bg-muted/20 rounded-lg border border-border/50">
           <p className="mb-2">
             <span className="text-green-400">$</span>{" "}
             <span className="text-cyan-400">cat</span> ~/career/highlights.json
@@ -102,6 +165,108 @@ export default function About() {
             Loading professional milestones...
           </p>
         </div>
+
+        <Card className="mt-6 bg-card/80 border-border overflow-hidden">
+          <div className="flex items-center gap-2 px-4 py-3 bg-muted/30 border-b border-border">
+            <div className="flex gap-1.5">
+              <div className="w-3 h-3 rounded-full bg-red-500" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500" />
+              <div className="w-3 h-3 rounded-full bg-green-500" />
+            </div>
+            <span className="text-xs text-muted-foreground ml-2">highlights.json</span>
+            <span className="text-xs text-muted-foreground/50 ml-auto">~/career/</span>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="p-6 space-y-4">
+              <div className="font-mono text-xs space-y-1">
+                <p className="text-muted-foreground/60">{"// "}{currentHighlight.category}</p>
+                <p><span className="text-purple-400">const</span> <span className="text-cyan-400">experience</span> <span className="text-muted-foreground">=</span> {"{"}</p>
+                {Object.entries(currentHighlight.code).map(([key, value]) => (
+                  <p key={key} className="pl-4">
+                    <span className="text-cyan-400">"{key}"</span>
+                    <span className="text-muted-foreground">: </span>
+                    <span className={typeof value === "number" ? "text-orange-400" : "text-green-400"}>
+                      {typeof value === "number" ? value : `"${value}"`}
+                    </span>
+                    <span className="text-muted-foreground">,</span>
+                  </p>
+                ))}
+                <p>{"}"}</p>
+              </div>
+
+              <div className="pt-4">
+                <h3 className="text-xl font-semibold flex items-center gap-2">
+                  <span className="text-cyan-400">{">"}</span>
+                  {currentHighlight.title}
+                </h3>
+                <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+                  {currentHighlight.description}
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                {currentHighlight.tags.map((tag) => (
+                  <Badge 
+                    key={tag} 
+                    variant="secondary"
+                    className="bg-muted text-muted-foreground font-mono text-xs"
+                  >
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+
+              <p className="font-mono text-xs text-muted-foreground/60 pt-2">
+                {currentHighlight.command} <span className="animate-pulse">_</span>
+              </p>
+            </div>
+
+            <div className="relative bg-muted/20">
+              <img
+                src={currentHighlight.image}
+                alt={currentHighlight.title}
+                className="w-full h-full object-cover min-h-[300px]"
+                data-testid={`img-highlight-${currentHighlight.id}`}
+              />
+            </div>
+          </div>
+
+          <div className="flex items-center justify-center gap-4 py-4 border-t border-border bg-muted/20">
+            <Button
+              size="icon"
+              variant="ghost"
+              onClick={prevSlide}
+              data-testid="button-prev-slide"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </Button>
+
+            <div className="flex items-center gap-2">
+              <span className="text-muted-foreground">[</span>
+              {highlights.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    index === currentSlide ? "bg-primary" : "bg-muted-foreground/30"
+                  }`}
+                  data-testid={`button-slide-${index}`}
+                />
+              ))}
+              <span className="text-muted-foreground">]</span>
+            </div>
+
+            <Button
+              size="icon"
+              variant="ghost"
+              onClick={nextSlide}
+              data-testid="button-next-slide"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </Button>
+          </div>
+        </Card>
       </div>
     </div>
   );
