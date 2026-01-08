@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { CheckCircle, Briefcase, Code, TrendingUp, BarChart3, Zap, ChevronLeft, ChevronRight } from "lucide-react";
 import { SiPython, SiDatabricks, SiPostgresql } from "react-icons/si";
 import profileImage from "@assets/FotoDePerfilNew_1767892057825.jpeg";
-import highlightImage1 from "@assets/image_1767892839205.png";
+import highlightImage1 from "@assets/image_1767893451289.png";
 
 const technologies = [
   { name: "Python", icon: SiPython, color: "text-yellow-400" },
@@ -222,11 +222,11 @@ export default function About() {
               </p>
             </div>
 
-            <div className="relative bg-muted/20">
+            <div className="relative bg-muted/20 flex items-center justify-center">
               <img
                 src={currentHighlight.image}
                 alt={currentHighlight.title}
-                className="w-full h-full object-cover min-h-[300px]"
+                className="w-full h-[320px] object-cover object-top"
                 data-testid={`img-highlight-${currentHighlight.id}`}
               />
             </div>
