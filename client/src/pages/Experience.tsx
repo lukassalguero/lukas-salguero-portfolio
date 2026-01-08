@@ -146,7 +146,7 @@ export default function Experience() {
                       </div>
 
                       {exp.teamImages && exp.teamImages.length > 0 && (
-                        <aside className="md:w-44 lg:w-52 shrink-0 mx-auto md:mx-0 md:pt-2">
+                        <aside className={`md:w-44 lg:w-52 shrink-0 mx-auto md:mx-0 ${exp.teamImages.length === 1 ? 'md:self-center' : 'md:pt-2'}`}>
                           <div className="font-mono text-xs text-muted-foreground mb-2 text-center md:text-left">
                             <span className="text-cyan-400">{"// "}</span>Team
                           </div>
@@ -158,9 +158,9 @@ export default function Experience() {
                               >
                                 <img 
                                   src={img} 
-                                  alt={`BCP Team ${idx + 1}`}
+                                  alt={`Team ${idx + 1}`}
                                   className="w-full h-auto object-cover max-w-[200px] md:max-w-none mx-auto"
-                                  data-testid={`img-bcp-team-${idx + 1}`}
+                                  data-testid={`img-team-${exp.id}-${idx + 1}`}
                                 />
                               </div>
                             ))}
