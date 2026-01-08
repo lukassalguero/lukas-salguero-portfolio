@@ -7,7 +7,7 @@ import { SiPython, SiDatabricks, SiPostgresql } from "react-icons/si";
 import profileImage from "@assets/FotoDePerfilNew_1767892057825.jpeg";
 import highlightImage1 from "@assets/WhatsApp_Image_2026-01-08_at_12.30.17_PM_(1)_1767893932207.jpeg";
 import highlightImage2 from "@assets/WhatsApp_Image_2026-01-08_at_12.44.08_PM_1767894301281.jpeg";
-import highlightImage3 from "@assets/WhatsApp_Image_2026-01-08_at_12.28.19_PM_1767894074581.jpeg";
+import highlightImage3 from "@assets/image_1767897159767.png";
 
 const technologies = [
   { name: "Python", icon: SiPython, color: "text-yellow-400" },
