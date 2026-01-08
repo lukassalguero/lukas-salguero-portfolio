@@ -177,8 +177,8 @@ export default function About() {
             <span className="text-xs text-muted-foreground/50 ml-auto">~/career/</span>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-0">
-            <div className="p-6 space-y-4">
+          <div className="grid md:grid-cols-2 gap-0 min-h-[360px]">
+            <div className="p-6 space-y-4 flex flex-col justify-center">
               <div className="font-mono text-xs space-y-1">
                 <p className="text-muted-foreground/60">{"// "}{currentHighlight.category}</p>
                 <p><span className="text-purple-400">const</span> <span className="text-cyan-400">experience</span> <span className="text-muted-foreground">=</span> {"{"}</p>
@@ -222,11 +222,11 @@ export default function About() {
               </p>
             </div>
 
-            <div className="relative bg-muted/20 flex items-center justify-center p-4">
+            <div className="relative bg-muted/10 flex items-center justify-center overflow-hidden">
               <img
                 src={currentHighlight.image}
                 alt={currentHighlight.title}
-                className="max-w-full max-h-[320px] object-contain"
+                className="w-full h-full min-h-[360px] object-cover object-center"
                 data-testid={`img-highlight-${currentHighlight.id}`}
               />
             </div>
