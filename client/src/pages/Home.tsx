@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Terminal, Code2, Zap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import backgroundImage from "@assets/WhatsApp_Image_2026-01-09_at_12.57.40_AM_1767938871723.jpeg";
 
@@ -106,35 +106,6 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-          <div className="flex flex-col items-center gap-3 p-6 rounded-lg bg-card/60 backdrop-blur-sm border border-border/50">
-            <div className="p-3 rounded-lg bg-primary/10">
-              <Zap className="w-6 h-6 text-primary" />
-            </div>
-            <h3 className="font-semibold text-white">Tech-Driven Thinker</h3>
-            <p className="text-sm text-white/70 text-center">
-              Applying technology to solve real business problems.
-            </p>
-          </div>
-          <div className="flex flex-col items-center gap-3 p-6 rounded-lg bg-card/60 backdrop-blur-sm border border-border/50">
-            <div className="p-3 rounded-lg bg-cyan-500/10">
-              <Terminal className="w-6 h-6 text-cyan-400" />
-            </div>
-            <h3 className="font-semibold text-white">Data & BI</h3>
-            <p className="text-sm text-white/70 text-center">
-              Transforming data into actionable insights
-            </p>
-          </div>
-          <div className="flex flex-col items-center gap-3 p-6 rounded-lg bg-card/60 backdrop-blur-sm border border-border/50">
-            <div className="p-3 rounded-lg bg-purple-500/10">
-              <Code2 className="w-6 h-6 text-purple-400" />
-            </div>
-            <h3 className="font-semibold text-white">Creative & Innovative Mind</h3>
-            <p className="text-sm text-white/70 text-center">
-              Creative mindset, open to learning and new challenges.
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );
