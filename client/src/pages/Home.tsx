@@ -1,8 +1,8 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Terminal, Code2, Zap, ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useState, useCallback } from "react";
-import backgroundImage from "@assets/image_1767937795155.png";
+import { ArrowRight, Terminal, Code2, Zap } from "lucide-react";
+import { useEffect, useState } from "react";
+import backgroundImage from "@assets/image_1767938317381.png";
 
 const titles = [
   "Business Insights Builder",
@@ -10,36 +10,10 @@ const titles = [
   "Tech-Driven Thinker",
 ];
 
-const highlights = [
-  {
-    icon: Zap,
-    iconColor: "text-primary",
-    bgColor: "bg-primary/10",
-    title: "Tech-Driven Thinker",
-    description: "Applying technology to solve real business problems.",
-  },
-  {
-    icon: Terminal,
-    iconColor: "text-cyan-400",
-    bgColor: "bg-cyan-500/10",
-    title: "Data & BI",
-    description: "Transforming data into actionable insights",
-  },
-  {
-    icon: Code2,
-    iconColor: "text-purple-400",
-    bgColor: "bg-purple-500/10",
-    title: "Creative & Innovative Mind",
-    description: "Creative mindset, open to learning and new challenges.",
-  },
-];
-
 export default function Home() {
   const [titleIndex, setTitleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const currentTitle = titles[titleIndex];
@@ -70,42 +44,16 @@ export default function Home() {
     };
   }, [displayText, isDeleting, titleIndex]);
 
-  useEffect(() => {
-    if (isPaused) return;
-    
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % highlights.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [isPaused]);
-
-  const handleManualNav = useCallback((direction: 'prev' | 'next') => {
-    setIsPaused(true);
-    if (direction === 'prev') {
-      setCurrentSlide((prev) => (prev - 1 + highlights.length) % highlights.length);
-    } else {
-      setCurrentSlide((prev) => (prev + 1) % highlights.length);
-    }
-    setTimeout(() => setIsPaused(false), 10000);
-  }, []);
-
-  const handleDotClick = useCallback((index: number) => {
-    setIsPaused(true);
-    setCurrentSlide(index);
-    setTimeout(() => setIsPaused(false), 10000);
-  }, []);
-
   return (
     <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 relative overflow-hidden">
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-contain bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       />
       
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-[#0a1628]/75 to-[#050a14]/85" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-[#0a1628]/70 to-[#050a14]/80" />
       
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/60 via-transparent to-[#0a1628]/60" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/50 via-transparent to-[#0a1628]/50" />
 
       <div className="absolute top-10 left-10 text-white/10 font-mono text-xs hidden lg:block z-10">
         <pre>{`// Home.tsx
@@ -155,62 +103,33 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="max-w-md mx-auto">
-          <div className="relative overflow-hidden rounded-lg">
-            <div 
-              className="flex transition-transform duration-700 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {highlights.map((item, index) => (
-                <div 
-                  key={index}
-                  className="w-full flex-shrink-0 p-6 bg-card/60 backdrop-blur-sm border border-border/50 rounded-lg"
-                >
-                  <div className="flex flex-col items-center gap-3">
-                    <div className={`p-3 rounded-lg ${item.bgColor}`}>
-                      <item.icon className={`w-6 h-6 ${item.iconColor}`} />
-                    </div>
-                    <h3 className="font-semibold text-white">{item.title}</h3>
-                    <p className="text-sm text-white/70 text-center">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          <div className="flex flex-col items-center gap-3 p-6 rounded-lg bg-card/60 backdrop-blur-sm border border-border/50">
+            <div className="p-3 rounded-lg bg-primary/10">
+              <Zap className="w-6 h-6 text-primary" />
             </div>
+            <h3 className="font-semibold text-white">Tech-Driven Thinker</h3>
+            <p className="text-sm text-white/70 text-center">
+              Applying technology to solve real business problems.
+            </p>
           </div>
-
-          <div className="flex items-center justify-center gap-4 mt-4">
-            <button
-              onClick={() => handleManualNav('prev')}
-              className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/70 hover:bg-white/20 hover:text-white transition-colors"
-              data-testid="button-prev-highlight"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-
-            <div className="flex items-center gap-2">
-              {highlights.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleDotClick(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === currentSlide 
-                      ? "bg-primary w-6" 
-                      : "bg-white/30 hover:bg-white/50"
-                  }`}
-                  data-testid={`button-highlight-dot-${index}`}
-                />
-              ))}
+          <div className="flex flex-col items-center gap-3 p-6 rounded-lg bg-card/60 backdrop-blur-sm border border-border/50">
+            <div className="p-3 rounded-lg bg-cyan-500/10">
+              <Terminal className="w-6 h-6 text-cyan-400" />
             </div>
-
-            <button
-              onClick={() => handleManualNav('next')}
-              className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/70 hover:bg-white/20 hover:text-white transition-colors"
-              data-testid="button-next-highlight"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
+            <h3 className="font-semibold text-white">Data & BI</h3>
+            <p className="text-sm text-white/70 text-center">
+              Transforming data into actionable insights
+            </p>
+          </div>
+          <div className="flex flex-col items-center gap-3 p-6 rounded-lg bg-card/60 backdrop-blur-sm border border-border/50">
+            <div className="p-3 rounded-lg bg-purple-500/10">
+              <Code2 className="w-6 h-6 text-purple-400" />
+            </div>
+            <h3 className="font-semibold text-white">Creative & Innovative Mind</h3>
+            <p className="text-sm text-white/70 text-center">
+              Creative mindset, open to learning and new challenges.
+            </p>
           </div>
         </div>
       </div>
