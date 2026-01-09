@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
-import backgroundImage from "@assets/WhatsApp_Image_2026-01-09_at_12.57.40_AM_1767938871723.jpeg";
+import backgroundImage from "@assets/WhatsApp_Image_2026-01-09_at_2.38.20_PM_1767987531002.jpeg";
 
 const titles = [
   "Business Insights Builder",
@@ -50,7 +50,7 @@ export default function Home() {
         className="absolute inset-0 bg-cover bg-no-repeat"
         style={{ 
           backgroundImage: `url(${backgroundImage})`,
-          backgroundPosition: "35% center"
+          backgroundPosition: "center center"
         }}
       />
       
