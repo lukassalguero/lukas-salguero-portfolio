@@ -18,9 +18,8 @@ const technologies = [
 ];
 
 const stats = [
-  { value: "20k+", label: "Social Media Followers", icon: TrendingUp },
-  { value: "1+", label: "Years Industrial Experience", icon: Briefcase },
-  { value: "5", label: "Projects Completed", icon: Code },
+  { value: "1+", label: "Year Professional Experience", icon: Briefcase },
+  { value: "7+", label: "Real Projects Completed", icon: Code },
 ];
 
 const highlights = [
@@ -90,7 +89,7 @@ export default function About() {
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-3">About Me</h1>
           <p className="text-muted-foreground text-lg">
-            Industrial Engineering Student & AI Enthusiast
+            Industrial Engineering Student & Tech-Driven Analyst
           </p>
         </div>
 
@@ -146,7 +145,7 @@ export default function About() {
 
             <div>
               <h3 className="font-mono text-sm text-cyan-400 mb-4">{"// "}In Numbers</h3>
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
                 {stats.map((stat) => (
                   <div key={stat.label} className="text-center">
                     <p className="text-3xl font-bold text-primary">{stat.value}</p>

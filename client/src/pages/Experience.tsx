@@ -24,7 +24,7 @@ const experiences = [
     ],
     skills: ["SQL", "Databricks", "Power BI", "Data Analysis"],
     teamImages: [bcpTeamImage1, bcpTeamImage2],
-    certificateUrl: "#",
+    certificateUrl: "https://raw.githubusercontent.com/lukassalguero/analyticsProject/main/BCP_CertificadoLaboral.pdf",
   },
   {
     id: 2,

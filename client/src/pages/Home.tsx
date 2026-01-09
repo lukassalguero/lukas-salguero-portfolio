@@ -4,10 +4,9 @@ import { ArrowRight, Terminal, Code2, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const titles = [
-  "AI & Business Automation",
-  "Web Development",
+  "Business Insights Builder",
   "Data Analytics",
-  "Process Optimization",
+  "Tech-Driven Thinker",
 ];
 
 export default function Home() {
@@ -107,9 +106,9 @@ export default function Home() {
             <div className="p-3 rounded-lg bg-primary/10">
               <Zap className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="font-semibold">Automation</h3>
+            <h3 className="font-semibold">Tech-Driven Thinker</h3>
             <p className="text-sm text-muted-foreground text-center">
-              Streamlining workflows with n8n & Power Automate
+              Applying technology to solve real business problems.
             </p>
           </div>
           <div className="flex flex-col items-center gap-3 p-6 rounded-lg bg-card/50 border border-border">
@@ -125,9 +124,9 @@ export default function Home() {
             <div className="p-3 rounded-lg bg-purple-500/10">
               <Code2 className="w-6 h-6 text-purple-400" />
             </div>
-            <h3 className="font-semibold">Web Development</h3>
+            <h3 className="font-semibold">Creative & Innovative Mind</h3>
             <p className="text-sm text-muted-foreground text-center">
-              Creating digital solutions for businesses
+              Creative mindset, open to learning and new challenges.
             </p>
           </div>
         </div>
