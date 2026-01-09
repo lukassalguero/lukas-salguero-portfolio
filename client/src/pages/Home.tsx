@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Terminal, Code2, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
-import backgroundImage from "@assets/image_1767938317381.png";
+import backgroundImage from "@assets/WhatsApp_Image_2026-01-09_at_12.57.40_AM_1767938871723.jpeg";
 
 const titles = [
   "Business Insights Builder",
@@ -46,18 +46,17 @@ export default function Home() {
 
   return (
     <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628] via-[#0d1f36] to-[#050a14]" />
-      
       <div 
-        className="absolute inset-0 bg-contain bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
+        className="absolute inset-0 bg-cover bg-no-repeat"
+        style={{ 
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundPosition: "35% center"
+        }}
       />
       
-      <div className="absolute inset-0 bg-black/45" />
+      <div className="absolute inset-0 bg-black/50" />
       
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50" />
-      
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/40 via-transparent to-[#0a1628]/40" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
 
       <div className="absolute top-10 left-10 text-white/10 font-mono text-xs hidden lg:block z-10">
         <pre>{`// Home.tsx
