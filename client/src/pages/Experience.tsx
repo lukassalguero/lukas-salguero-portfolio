@@ -1,11 +1,13 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Building2, Code2, FlaskConical, Award } from "lucide-react";
+import { Building2, Code2, FlaskConical, Award, Plane } from "lucide-react";
 import bcpTeamImage1 from "@assets/image_1767855533853.png";
 import bcpTeamImage2 from "@assets/image_1767890527899.png";
 import innovalabTeamImage from "@assets/image_1767890798616.png";
 import freelanceImage from "@assets/image_1767891188314.png";
+import kalahariImage1 from "@assets/WhatsApp_Image_2026-01-09_at_3.03.49_PM_1767989149380.jpeg";
+import kalahariImage2 from "@assets/WhatsApp_Image_2026-01-09_at_3.03.49_PM_(1)_1767989145452.jpeg";
 
 const experiences = [
   {
@@ -45,7 +47,7 @@ const experiences = [
     id: 3,
     role: "Data Analytics Intern",
     company: "InnovaLab",
-    period: "January 2024 - May 2024",
+    period: "February 2024 - May 2024",
     icon: FlaskConical,
     color: "text-purple-400",
     bgColor: "bg-purple-500/10",
@@ -55,6 +57,21 @@ const experiences = [
     ],
     skills: ["SQL", "Python"],
     teamImages: [innovalabTeamImage],
+  },
+  {
+    id: 4,
+    role: "Work and Travel Experience",
+    company: "Banquet Attendant - Kalahari Resorts",
+    period: "2023 - 2024",
+    icon: Plane,
+    color: "text-cyan-400",
+    bgColor: "bg-cyan-500/10",
+    highlights: [
+      "Participated in the Peru - Work and Travel program as a banquet attendant at Kalahari Resorts (Sandusky, Ohio), gaining international work experience and strengthening my teamwork and customer service skills.",
+      "Improved my English communication skills through daily interaction with clients, managers and the team, developing confidence, responsibility, and cultural awareness.",
+    ],
+    skills: ["International experience", "English communication"],
+    teamImages: [kalahariImage1, kalahariImage2],
   },
 ];
 

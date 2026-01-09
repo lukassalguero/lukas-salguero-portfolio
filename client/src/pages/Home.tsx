@@ -5,17 +5,15 @@ import { useEffect, useState } from "react";
 import backgroundImage from "@assets/WhatsApp_Image_2026-01-09_at_2.38.20_PM_1767987531002.jpeg";
 
 const titles = [
-  "Business Insights Builder",
   "Data Analytics",
-  "Tech-Driven Thinker",
+  "Business Insights Builder",
+  "Creative Mindset",
 ];
 
 const fullName = "LUKAS SALGUERO";
 
 export default function Home() {
   const [titleIndex, setTitleIndex] = useState(0);
-  const [displayText, setDisplayText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
   const [nameText, setNameText] = useState("");
   const [nameComplete, setNameComplete] = useState(false);
 
@@ -33,33 +31,12 @@ export default function Home() {
   }, [nameText, nameComplete]);
 
   useEffect(() => {
-    const currentTitle = titles[titleIndex];
-    const typingSpeed = isDeleting ? 50 : 100;
-    const pauseTime = 2000;
-    let pauseTimeout: ReturnType<typeof setTimeout>;
+    const interval = setInterval(() => {
+      setTitleIndex((prev) => (prev + 1) % titles.length);
+    }, 3000);
 
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        if (displayText.length < currentTitle.length) {
-          setDisplayText(currentTitle.slice(0, displayText.length + 1));
-        } else {
-          pauseTimeout = setTimeout(() => setIsDeleting(true), pauseTime);
-        }
-      } else {
-        if (displayText.length > 0) {
-          setDisplayText(displayText.slice(0, -1));
-        } else {
-          setIsDeleting(false);
-          setTitleIndex((prev) => (prev + 1) % titles.length);
-        }
-      }
-    }, typingSpeed);
-
-    return () => {
-      clearTimeout(timeout);
-      clearTimeout(pauseTimeout);
-    };
-  }, [displayText, isDeleting, titleIndex]);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 relative overflow-hidden">
@@ -99,9 +76,11 @@ export default function Home() {
         </h1>
 
         <div className="h-12 md:h-14 flex items-center justify-center mb-8">
-          <span className="font-mono text-xl md:text-2xl text-primary drop-shadow-md">
-            {displayText}
-            <span className="animate-pulse">|</span>
+          <span 
+            key={titleIndex}
+            className="font-mono text-xl md:text-2xl text-primary drop-shadow-md animate-fade-in"
+          >
+            {titles[titleIndex]}
           </span>
         </div>
 
