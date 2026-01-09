@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Terminal, Code2, Zap, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState, useCallback } from "react";
-import backgroundImage from "@assets/image_1767935346333.png";
+import backgroundImage from "@assets/image_1767937795155.png";
 
 const titles = [
   "Business Insights Builder",
