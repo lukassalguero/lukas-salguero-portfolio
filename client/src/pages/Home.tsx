@@ -46,14 +46,18 @@ export default function Home() {
 
   return (
     <div className="min-h-[calc(100vh-100px)] flex flex-col items-center justify-center px-4 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628] via-[#0d1f36] to-[#050a14]" />
+      
       <div 
         className="absolute inset-0 bg-contain bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       />
       
-      <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-[#0a1628]/70 to-[#050a14]/80" />
+      <div className="absolute inset-0 bg-black/45" />
       
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/50 via-transparent to-[#0a1628]/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50" />
+      
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/40 via-transparent to-[#0a1628]/40" />
 
       <div className="absolute top-10 left-10 text-white/10 font-mono text-xs hidden lg:block z-10">
         <pre>{`// Home.tsx
