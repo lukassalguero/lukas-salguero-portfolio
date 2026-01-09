@@ -10,10 +10,27 @@ const titles = [
   "Tech-Driven Thinker",
 ];
 
+const fullName = "LUKAS SALGUERO";
+
 export default function Home() {
   const [titleIndex, setTitleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const [nameText, setNameText] = useState("");
+  const [nameComplete, setNameComplete] = useState(false);
+
+  useEffect(() => {
+    if (nameComplete) return;
+    
+    if (nameText.length < fullName.length) {
+      const timeout = setTimeout(() => {
+        setNameText(fullName.slice(0, nameText.length + 1));
+      }, 80);
+      return () => clearTimeout(timeout);
+    } else {
+      setNameComplete(true);
+    }
+  }, [nameText, nameComplete]);
 
   useEffect(() => {
     const currentTitle = titles[titleIndex];
@@ -77,7 +94,8 @@ export default function Home() {
           className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-white drop-shadow-lg"
           data-testid="text-name"
         >
-          LUKAS SALGUERO
+          {nameText}
+          {!nameComplete && <span className="animate-pulse">|</span>}
         </h1>
 
         <div className="h-12 md:h-14 flex items-center justify-center mb-8">

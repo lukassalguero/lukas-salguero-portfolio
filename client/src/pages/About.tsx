@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Briefcase, Code, TrendingUp, BarChart3, Zap, ChevronLeft, ChevronRight } from "lucide-react";
+import { CheckCircle, Briefcase, Code, BarChart3, Zap, ChevronLeft, ChevronRight } from "lucide-react";
 import { SiPython, SiDatabricks, SiPostgresql } from "react-icons/si";
 import profileImage from "@assets/FotoDePerfilNew_1767892057825.jpeg";
 import highlightImage1 from "@assets/WhatsApp_Image_2026-01-08_at_12.30.17_PM_(1)_1767893932207.jpeg";
@@ -72,14 +72,41 @@ const highlights = [
 
 export default function About() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % highlights.length);
-  };
+  }, []);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev - 1 + highlights.length) % highlights.length);
-  };
+  }, []);
+
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isPaused, nextSlide]);
+
+  const handleManualNav = useCallback((direction: 'prev' | 'next') => {
+    setIsPaused(true);
+    if (direction === 'prev') {
+      prevSlide();
+    } else {
+      nextSlide();
+    }
+    setTimeout(() => setIsPaused(false), 10000);
+  }, [prevSlide, nextSlide]);
+
+  const handleDotClick = useCallback((index: number) => {
+    setIsPaused(true);
+    setCurrentSlide(index);
+    setTimeout(() => setIsPaused(false), 10000);
+  }, []);
 
   const currentHighlight = highlights[currentSlide];
 
@@ -178,52 +205,64 @@ export default function About() {
             <span className="text-xs text-muted-foreground/50 ml-auto">~/career/</span>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-0 min-h-[320px]">
-            <div className="p-6 space-y-3 flex flex-col justify-center">
-              <div className="font-mono text-xs space-y-1">
-                <p className="text-muted-foreground/60 text-[14px]">{"// "}{currentHighlight.category}</p>
-                {Object.entries(currentHighlight.code).map(([key, value]) => (
-                  <p key={key} className="text-[13px]">
-                    <span className="text-cyan-400">"{key}"</span>
-                    <span className="text-muted-foreground">: </span>
-                    <span className="text-green-400">"{value}"</span>
-                  </p>
-                ))}
-              </div>
+          <div className="relative overflow-hidden">
+            <div 
+              className="flex transition-transform duration-700 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {highlights.map((highlight) => (
+                <div 
+                  key={highlight.id}
+                  className="w-full flex-shrink-0"
+                >
+                  <div className="grid md:grid-cols-2 gap-0 min-h-[320px]">
+                    <div className="p-6 space-y-3 flex flex-col justify-center">
+                      <div className="font-mono text-xs space-y-1">
+                        <p className="text-muted-foreground/60 text-[14px]">{"// "}{highlight.category}</p>
+                        {Object.entries(highlight.code).map(([key, value]) => (
+                          <p key={key} className="text-[13px]">
+                            <span className="text-cyan-400">"{key}"</span>
+                            <span className="text-muted-foreground">: </span>
+                            <span className="text-green-400">"{value}"</span>
+                          </p>
+                        ))}
+                      </div>
 
-              <div className="pt-4">
-                <h3 className="text-xl font-semibold flex items-center gap-2">
-                  <span className="text-cyan-400">{">"}</span>
-                  {currentHighlight.title}
-                </h3>
-                <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
-                  {currentHighlight.description}
-                </p>
-              </div>
+                      <div className="pt-4">
+                        <h3 className="text-xl font-semibold flex items-center gap-2">
+                          <span className="text-cyan-400">{">"}</span>
+                          {highlight.title}
+                        </h3>
+                        <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
+                          {highlight.description}
+                        </p>
+                      </div>
 
-              <div className="flex flex-wrap gap-2 pt-2">
-                {currentHighlight.tags.map((tag) => (
-                  <Badge 
-                    key={tag} 
-                    variant="secondary"
-                    className="bg-muted text-muted-foreground font-mono text-xs"
-                  >
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
+                      <div className="flex flex-wrap gap-2 pt-2">
+                        {highlight.tags.map((tag) => (
+                          <Badge 
+                            key={tag} 
+                            variant="secondary"
+                            className="bg-muted text-muted-foreground font-mono text-xs"
+                          >
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
 
-              
-            </div>
-
-            <div className="relative bg-gradient-to-br from-muted/20 to-muted/5 flex items-stretch">
-              <img
-                src={currentHighlight.image}
-                alt={currentHighlight.title}
-                className="w-full h-full object-contain object-center"
-                style={{ minHeight: '320px' }}
-                data-testid={`img-highlight-${currentHighlight.id}`}
-              />
+                    <div className="relative bg-gradient-to-br from-muted/20 to-muted/5 flex items-stretch">
+                      <img
+                        src={highlight.image}
+                        alt={highlight.title}
+                        className="w-full h-full object-contain object-center"
+                        style={{ minHeight: '320px' }}
+                        data-testid={`img-highlight-${highlight.id}`}
+                      />
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -231,7 +270,7 @@ export default function About() {
             <Button
               size="icon"
               variant="ghost"
-              onClick={prevSlide}
+              onClick={() => handleManualNav('prev')}
               data-testid="button-prev-slide"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -242,9 +281,9 @@ export default function About() {
               {highlights.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentSlide ? "bg-primary" : "bg-muted-foreground/30"
+                  onClick={() => handleDotClick(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? "bg-primary w-6" : "bg-muted-foreground/30"
                   }`}
                   data-testid={`button-slide-${index}`}
                 />
@@ -255,7 +294,7 @@ export default function About() {
             <Button
               size="icon"
               variant="ghost"
-              onClick={nextSlide}
+              onClick={() => handleManualNav('next')}
               data-testid="button-next-slide"
             >
               <ChevronRight className="w-5 h-5" />
