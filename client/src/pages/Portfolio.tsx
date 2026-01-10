@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Play, FileSpreadsheet, Code2, Database, BarChart3, Presentation, ArrowRight, Github } from "lucide-react";
 import { SiPython, SiPowerbi } from "react-icons/si";
-import kickboxingImage from "@assets/image_1767853381689.png";
+import madeEasyImage from "@assets/image_1768021374263.png";
 import bypImage from "@assets/image_1767853449347.png";
 import mirandaImage from "@assets/image_1767853503776.png";
 
@@ -52,15 +52,15 @@ const pipelineSteps = [
 const webProjects = [
   {
     id: 2,
-    name: "Kickboxing_School - WebSite",
-    client: "Sarria Kickboxing Center",
+    name: "Academia_MadeEasy - WebSite",
+    client: "Academia Made Easy",
     date: "March 2025",
-    description: "A complete website for a Kickboxing school, designed to promote the sport and support its digital growth in Peru. The site includes information about classes, trainers, and a contact system for new students.",
-    tech: ["HTML", "CSS", "JavaScript", "AI Tools"],
-    image: kickboxingImage,
+    description: "A website developed for MadeEasy, an academy for engineering students at PUCP, focused on showcasing the courses offered and facilitating contact between students and instructors via a WhatsApp link.",
+    tech: ["HTML", "CSS", "AI Tools"],
+    image: madeEasyImage,
     hasDemo: false,
     hasLive: true,
-    liveUrl: "https://skc-react-agzc.vercel.app/",
+    liveUrl: "https://www.asesoriamadeeasy.com/#",
   },
   {
     id: 3,
