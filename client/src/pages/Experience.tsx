@@ -1,10 +1,9 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Building2, Code2, FlaskConical, Award, Plane } from "lucide-react";
+import { Building2, Code2, Award, Plane } from "lucide-react";
 import bcpTeamImage1 from "@assets/image_1767855533853.png";
 import bcpTeamImage2 from "@assets/image_1767890527899.png";
-import innovalabTeamImage from "@assets/image_1767890798616.png";
 import freelanceImage from "@assets/image_1767891188314.png";
 import kalahariImage1 from "@assets/WhatsApp_Image_2026-01-09_at_3.03.49_PM_1767989149380.jpeg";
 import kalahariImage2 from "@assets/WhatsApp_Image_2026-01-09_at_3.03.49_PM_(1)_1767989145452.jpeg";
@@ -42,21 +41,6 @@ const experiences = [
     ],
     skills: ["HTML", "CSS", "AI Tools", "Client Management"],
     teamImages: [freelanceImage],
-  },
-  {
-    id: 3,
-    role: "Data Analytics Intern",
-    company: "InnovaLab",
-    period: "February 2024 - May 2024",
-    icon: FlaskConical,
-    color: "text-purple-400",
-    bgColor: "bg-purple-500/10",
-    highlights: [
-      "Participated in university-led engineering project supporting a public healthcare center",
-      "Created SQL queries to extract and segment patient data by demographic groups, service type, enabling deeper comparisons. And performed data cleaning using Python (Pandas).",
-    ],
-    skills: ["SQL", "Python"],
-    teamImages: [innovalabTeamImage],
   },
   {
     id: 4,
