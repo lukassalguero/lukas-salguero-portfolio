@@ -21,7 +21,6 @@ const experiences = [
       "Data ETL & Revenue Monitoring: Extracted DCC Visa data via SQL/Databricks to build dashboards for tracking real-time revenue and improving the accuracy of weekly commercial projections.",
       "Automation Initiative: Proposed and developed a Power Automate/Excel system that centralized incident data, reducing manual reporting time by 30% and speeding up ATM issue response.",
       "Strategic Analysis: Analyzed financial performance of ATMs nationwide to identify high-return areas, providing insights for strategic resource reallocation and investment.",
-      "Cross-functional Collaboration: Partnered with Business Specialists to consolidate and validate daily ATM/POS revenue data, ensuring accurate and timely financial reporting to the Treasury department.",
     ],
     skills: ["SQL", "Databricks", "Power BI", "Data Analysis"],
     teamImages: [bcpTeamImage1, bcpTeamImage2],
