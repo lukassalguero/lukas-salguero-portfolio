@@ -19,8 +19,8 @@ const experiences = [
     bgColor: "bg-blue-500/10",
     highlights: [
       "Data ETL & Revenue Monitoring: Extracted DCC Visa data via SQL/Databricks to build dashboards for tracking real-time revenue and improving the accuracy of weekly commercial projections.",
-      "Automation Initiative: Proposed and developed a Power Automate/Excel system that centralized incident data, reducing manual reporting time by 30% and speeding up ATM issue response.",
-      "Strategic Analysis: Analyzed financial performance of ATMs nationwide to identify high-return areas, providing insights for strategic resource reallocation and investment.",
+      "Stakeholder Management: Partnered with business units a to align daily revenue performance with financial targets and ensure 100% reporting accuracy, providing visibility of commercial Dashboards.",
+      "Market expansion strategy: Developed presentations of the national ATM portfolio to identify high-ROI locations and growth opportunities.",
     ],
     skills: ["SQL", "Databricks", "Power BI", "Data Analysis"],
     teamImages: [bcpTeamImage1, bcpTeamImage2],
@@ -28,18 +28,19 @@ const experiences = [
   },
   {
     id: 2,
-    role: "Freelance Web Developer",
+    role: "Digital Solutions Consultant | Freelancer",
     company: "Self-Employed",
     period: "April 2025 - September 2025",
     icon: Code2,
     color: "text-green-400",
     bgColor: "bg-green-500/10",
     highlights: [
-      "Built functional websites for small local businesses, focusing on clear structure to improve their digital presence using HTML, CSS, JS and AI-assisted tools to speed up development and solve technical tasks more efficiently.",
-      "Managed a full business operation: First meeting with clients, dentifying client needs, negotiating prices and finally the web development, ensuring the domain and hosting were set up correctly for a smooth launch.",
+      "Digital Growth and Solutions: Developed custom websites for local businesses to increase their digital presence. I used AI tools to optimize development and deliver high quality solutions that helped clients boost their brand and online sales.",
+      "Managed a full business operation: First meeting with clients, identifying client needs, negotiating prices and finally the web development, ensuring the domain and hosting were set up correctly for a perfect launch.",
     ],
-    skills: ["HTML", "AI Tools", "Business Operations", "Client Management"],
+    skills: ["AI Tools", "Business Operations", "Client Management"],
     teamImages: [freelanceImage],
+    teamLabel: "Projects",
   },
   {
     id: 4,
@@ -148,7 +149,7 @@ export default function Experience() {
                       {exp.teamImages && exp.teamImages.length > 0 && (
                         <aside className={`md:w-44 lg:w-52 shrink-0 mx-auto md:mx-0 ${exp.teamImages.length === 1 ? 'md:self-center' : 'md:pt-2'}`}>
                           <div className="font-mono text-xs text-muted-foreground mb-2 text-center md:text-left">
-                            <span className="text-cyan-400">{"// "}</span>Team
+                            <span className="text-cyan-400">{"// "}</span>{exp.teamLabel || "Team"}
                           </div>
                           <div className="space-y-3">
                             {exp.teamImages.map((img, idx) => (

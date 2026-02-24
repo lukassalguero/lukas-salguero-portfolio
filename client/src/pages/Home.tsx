@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 import backgroundImage from "@assets/WhatsApp_Image_2026-01-09_at_2.38.20_PM_1767987531002.jpeg";
 
 const titles = [
-  "Data Analytics",
-  "Business Insights Builder",
-  "Creative Mindset",
+  "Business & Sales Operations",
+  "Product & Solution Strategy",
+  "Commercial Analysis",
 ];
 
 const fullName = "LUKAS SALGUERO";
@@ -85,8 +85,8 @@ export default function Home() {
         </div>
 
         <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed drop-shadow-sm">
-          Building intelligent, business-driven digital solutions. 
-          I transform complex data and processes into practical tools that deliver real impact.
+          Specializing in commercial growth, sales operations, and product solutions. 
+          I enjoy turning business needs into practical actions that help teams sell and grow.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
