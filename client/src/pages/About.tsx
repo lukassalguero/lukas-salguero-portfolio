@@ -2,8 +2,8 @@ import { useState, useEffect, useCallback } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Briefcase, Code, BarChart3, Zap, ChevronLeft, ChevronRight } from "lucide-react";
-import { SiPython, SiDatabricks, SiPostgresql } from "react-icons/si";
+import { CheckCircle, Briefcase, Code, BarChart3, ChevronLeft, ChevronRight } from "lucide-react";
+import { SiPython, SiSalesforce, SiSlack, SiPostgresql } from "react-icons/si";
 import profileImage from "@assets/FotoDePerfilNew_1767892057825.jpeg";
 import highlightImage1 from "@assets/WhatsApp_Image_2026-01-08_at_12.30.17_PM_(1)_1767893932207.jpeg";
 import highlightImage2 from "@assets/WhatsApp_Image_2026-01-08_at_12.44.08_PM_1767894301281.jpeg";
@@ -12,13 +12,13 @@ import highlightImage3 from "@assets/image_1767897159767.png";
 const technologies = [
   { name: "Python", icon: SiPython, color: "text-yellow-400" },
   { name: "SQL", icon: SiPostgresql, color: "text-blue-400" },
-  { name: "Databricks", icon: SiDatabricks, color: "text-red-500" },
+  { name: "Salesforce", icon: SiSalesforce, color: "text-blue-400" },
   { name: "Power BI", icon: BarChart3, color: "text-yellow-500" },
-  { name: "Power Automate", icon: Zap, color: "text-blue-500" },
+  { name: "Slack", icon: SiSlack, color: "text-purple-400" },
 ];
 
 const stats = [
-  { value: "1+", label: "Year Professional Experience", icon: Briefcase },
+  { value: "2+", label: "Year Professional Experience", icon: Briefcase },
   { value: "7+", label: "Real Projects Completed", icon: Code },
 ];
 
@@ -29,7 +29,7 @@ const highlights = [
     code: {
       university: "Pontificia Universidad Católica del Perú",
       city: "Lima, Peru",
-      year: "2022-2026",
+      year: "2020-2024",
       Degree: "Industrial Engineering",
     },
     title: "Academic Education",
@@ -40,16 +40,16 @@ const highlights = [
   },
   {
     id: 2,
-    category: "Professional Experience",
+    category: "Current Job Position",
     code: {
-      company: "BCP",
-      role: "Business Intelligence Intern",
-      year: "Sep 2025 - Feb 2026",
-      area: "Alternative Channels",
+      company: "Siemens Energy",
+      role: "Project Management Office",
+      year: "June 2025 - July 2026",
+      "Business Area": "Gas Services",
     },
     title: "Professional Experience",
-    description: "Analyzing ATM and POS operations, transforming performance data into actionable insights. Supported decision-making by identifying patterns, inefficiencies, and opportunities to improve channels performance through data analysis.",
-    tags: ["Data", "Analytics", "Banking"],
+    description: "Supporting major gas-turbine maintenance (outages) for clients such as ENGIE, Kallpa, Orygen, and Termochilca. Involved in solution architecture, client sales opportunities, and end-to-end project ownership: From planning and execution to service closeout.",
+    tags: ["Project Mgmt", "Sales", "Solution Architect"],
     image: highlightImage2,
     command: "./view_career.sh",
   },
@@ -116,7 +116,7 @@ export default function About() {
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-3">About Me</h1>
           <p className="text-muted-foreground text-lg">
-            Industrial Engineering Student & Tech-Driven Analyst
+            Industrial Engineering & Tech-Project Management
           </p>
         </div>
 
@@ -139,19 +139,19 @@ export default function About() {
           <div className="space-y-8">
             <div className="space-y-4">
               <p className="text-muted-foreground leading-relaxed">
-                I'm <span className="text-foreground font-medium">Lukas Salguero</span>, a 20-year-old{" "}
-                <span className="text-primary">Industrial Engineering</span> student at{" "}
-                <span className="text-cyan-400">PUCP</span> with hands-on experience in Business Intelligence, 
-                data analysis, and process optimization.
+                I'm <span className="text-foreground font-medium">Lukas Salguero</span>, an{" "}
+                <span className="text-primary">Industrial Engineer</span> focused on Project Management
+                and Sales & Business Operations.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I'm deeply interested in the intersection of <span className="text-primary">business and technology</span>, 
-                especially how data and digital tools can drive better decision-making and operational efficiency. 
-                I enjoy turning complex problems into clear insights and building practical solutions.
+                I like bringing structure to complex work: Aligning teams, keeping priorities clear, and
+                making sure projects move forward and deliver real results. I like to understand how things
+                really work before acting, so the solutions I build are practical and actually stick.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I'm interested in joining companies expanding into <span className="text-cyan-400">LATAM</span>, 
-                where I can learn fast, take ownership early, and contribute with analytical thinking and creativity.
+                I'm looking to join international companies operating in{" "}
+                <span className="text-cyan-400">LATAM</span>, where I can take ownership early, learn
+                quickly, and support teams across project management, sales, and strategy.
               </p>
             </div>
 

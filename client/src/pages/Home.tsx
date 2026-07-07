@@ -7,10 +7,10 @@ import backgroundImage from "@assets/WhatsApp_Image_2026-01-09_at_2.38.20_PM_176
 const titles = [
   "Business & Sales Operations",
   "Product & Solution Strategy",
-  "Commercial Analysis",
+  "Project Management",
 ];
 
-const fullName = "LUKAS SALGUERO";
+const fullName = "ALESSANDRO SALGUERO";
 
 export default function Home() {
   const [titleIndex, setTitleIndex] = useState(0);
@@ -85,8 +85,9 @@ export default function Home() {
         </div>
 
         <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed drop-shadow-sm">
-          Specializing in commercial growth, sales operations, and product solutions. 
-          I enjoy turning business needs into practical actions that help teams sell and grow.
+          I bring structure to complex projects and connect them to our business goals: Aligning teams,
+          keeping priorities clear, and driving progress that supports growth. My focus is on execution:
+          making sure the right work happens at the right time.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
