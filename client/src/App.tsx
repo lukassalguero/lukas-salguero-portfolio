@@ -29,7 +29,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <div className="min-h-screen bg-background text-foreground flex flex-col">
+        <div className="min-h-screen bg-dev-grid text-foreground flex flex-col">
           <div className="h-9 bg-[hsl(222,30%,12%)] border-b border-border flex items-center justify-between px-4">
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />

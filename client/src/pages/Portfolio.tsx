@@ -100,7 +100,7 @@ const techColors: Record<string, string> = {
 
 export default function Portfolio() {
   return (
-    <div className="min-h-[calc(100vh-100px)] py-12 px-4 bg-background">
+    <div className="min-h-[calc(100vh-100px)] py-12 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 font-mono text-sm text-muted-foreground mb-6">
