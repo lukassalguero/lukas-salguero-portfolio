@@ -36,7 +36,7 @@ function App() {
               <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
               <div className="w-3 h-3 rounded-full bg-[#27ca40]" />
             </div>
-            <span className="font-mono text-sm text-muted-foreground">lukas-salguero-portfolio</span>
+            <span className="font-mono text-sm text-muted-foreground">alessandro-salguero-portfolio</span>
             <span className="font-mono text-xs text-muted-foreground/60">~/portfolio/src/pages</span>
           </div>
           <EditorTabs />

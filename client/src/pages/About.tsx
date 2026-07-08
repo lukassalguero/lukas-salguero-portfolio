@@ -19,7 +19,7 @@ const technologies = [
 
 const stats = [
   { value: "2+", label: "Year Professional Experience", icon: Briefcase },
-  { value: "7+", label: "Real Projects Completed", icon: Code },
+  { value: "7+", label: "Projects Completed", icon: Code },
 ];
 
 const highlights = [
@@ -44,7 +44,7 @@ const highlights = [
     code: {
       company: "Siemens Energy",
       role: "Project Management Office",
-      year: "June 2025 - July 2026",
+      year: "June 2025 – Present",
       "Business Area": "Gas Services",
     },
     title: "Professional Experience",
@@ -125,7 +125,7 @@ export default function About() {
             <div className="rounded-lg overflow-hidden border border-border/50 bg-muted/20 shadow-lg">
               <img
                 src={profileImage}
-                alt="Lukas Salguero"
+                alt="Alessandro Salguero"
                 className="w-full h-auto object-cover"
                 data-testid="img-profile"
               />
@@ -139,7 +139,7 @@ export default function About() {
           <div className="space-y-8">
             <div className="space-y-4">
               <p className="text-muted-foreground leading-relaxed">
-                I'm <span className="text-foreground font-medium">Lukas Salguero</span>, an{" "}
+                I'm <span className="text-foreground font-medium">Alessandro Salguero</span>, an{" "}
                 <span className="text-primary">Industrial Engineer</span> focused on Project Management
                 and Sales & Business Operations.
               </p>

@@ -15,15 +15,15 @@ const contactMethods = [
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/lukassalguero",
-    href: "https://linkedin.com/in/lukassalguero",
+    value: "https://www.linkedin.com/in/alessandro-salguero",
+    href: "https://www.linkedin.com/in/alessandro-salguero-garrido-9651a0416/",
     color: "text-blue-400",
     bgColor: "bg-blue-500/10",
   },
   {
     icon: SiInstagram,
     label: "Instagram",
-    value: "@lukas_salguero",
+    value: "@alessandro_salguero",
     href: "https://www.instagram.com/lukas_salguero/",
     color: "text-pink-400",
     bgColor: "bg-pink-500/10",

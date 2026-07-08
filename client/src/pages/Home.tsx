@@ -86,8 +86,7 @@ export default function Home() {
 
         <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed drop-shadow-sm">
           I bring structure to complex projects and connect them to our business goals: Aligning teams,
-          keeping priorities clear, and driving progress that supports growth. My focus is on execution:
-          making sure the right work happens at the right time.
+          keeping priorities clear, and driving progress that supports growth.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">

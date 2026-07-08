@@ -1,36 +1,48 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Building2, Code2, Award, Plane } from "lucide-react";
+import { Briefcase, Building2, Code2, Award } from "lucide-react";
 import bcpTeamImage1 from "@assets/image_1767855533853.png";
 import bcpTeamImage2 from "@assets/image_1767890527899.png";
 import freelanceImage from "@assets/image_1767891188314.png";
-import kalahariImage1 from "@assets/WhatsApp_Image_2026-01-09_at_3.03.49_PM_1767989149380.jpeg";
-import kalahariImage2 from "@assets/WhatsApp_Image_2026-01-09_at_3.03.49_PM_(1)_1767989145452.jpeg";
 
 const experiences = [
   {
     id: 1,
-    role: "Business Intelligence Intern",
+    role: "Project Management Office",
+    company: "Siemens Energy",
+    period: "June 2025 – Present",
+    icon: Briefcase,
+    color: "text-purple-400",
+    bgColor: "bg-purple-500/10",
+    highlights: [
+      "Cross-border client engagement: Coordinated end-to-end execution project of Energy Plants outages (parts, tooling logistics, engineering, EHS, system software architecture upgrades and deployment).",
+      "Executive Reporting: Produced high-impact presentations for clients (Engie, Kallpa, Orygen) tracking sales performance, project status, and customer NPS, adopted by LATAM North leadership for weekly commercial reviews.",
+      "CRM & Pipeline execution: Managed account updates and project milestones in Salesforce while coordinating internal stakeholders during hardware/software deployments, and maintenance operations to ensure on-time execution.",
+    ],
+    skills: ["Project Execution", "B2B Sales", "Risk Management"],
+  },
+  {
+    id: 2,
+    role: "Sales Development Representative",
     company: "Banco de Crédito del Perú (BCP)",
-    period: "September 2025 - February 2026",
+    period: "January 2024 – May 2025",
     icon: Building2,
     color: "text-blue-400",
     bgColor: "bg-blue-500/10",
     highlights: [
-      "Data ETL & Revenue Monitoring: Extracted DCC Visa data via SQL/Databricks to build dashboards for tracking real-time revenue and improving the accuracy of weekly commercial projections.",
-      "Stakeholder Management: Partnered with business units a to align daily revenue performance with financial targets and ensure 100% reporting accuracy, providing visibility of commercial Dashboards.",
-      "Market expansion strategy: Developed presentations of the national ATM portfolio to identify high-ROI locations and growth opportunities.",
+      "Commercial Analytics & Reporting: Automated SQL queries across commercial databases of 50K+ records and built Power BI dashboards, giving the commercial team real-time visibility into VISA transactions and KPIs.",
+      "Salesforce Pipeline Management: Used Salesforce to map and qualify revenue opportunities across the ATM network, targeting high-volume VISA transaction points to grow fee income.",
     ],
-    skills: ["SQL", "Databricks", "Power BI", "Data Analysis"],
+    skills: ["Salesforce", "Power BI", "Business Operations"],
     teamImages: [bcpTeamImage1, bcpTeamImage2],
     certificateUrl: "https://raw.githubusercontent.com/lukassalguero/analyticsProject/main/BCP_CertificadoLaboral.pdf",
   },
   {
-    id: 2,
+    id: 3,
     role: "Digital Solutions Consultant | Freelancer",
     company: "Self-Employed",
-    period: "April 2025 - September 2025",
+    period: "June 2024 - April 2025",
     icon: Code2,
     color: "text-green-400",
     bgColor: "bg-green-500/10",
@@ -41,21 +53,6 @@ const experiences = [
     skills: ["AI Tools", "Business Operations", "Client Management"],
     teamImages: [freelanceImage],
     teamLabel: "Projects",
-  },
-  {
-    id: 4,
-    role: "Work and Travel Experience",
-    company: "Banquet Attendant - Kalahari Resorts",
-    period: "December 2024 - March 2025",
-    icon: Plane,
-    color: "text-cyan-400",
-    bgColor: "bg-cyan-500/10",
-    highlights: [
-      "Multicultural Work: Participated in the Peru - Work and Travel program as a banquet attendant at Kalahari Resorts (Sandusky, Ohio), collaborating within multicultural teams, improving my adaptability and intercultural communication skills.",
-      "English language: Improved my English communication skills through daily interaction with clients, managers and the team, developing confidence, responsibility, and cultural awareness.",
-    ],
-    skills: ["International experience", "English communication"],
-    teamImages: [kalahariImage1, kalahariImage2],
   },
 ];
 
