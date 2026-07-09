@@ -114,16 +114,9 @@ export default function About() {
   return (
     <div className="min-h-[calc(100vh-100px)] py-12 px-4">
       <div className="max-w-5xl mx-auto">
-        <Reveal className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">About Me</h1>
-          <p className="text-muted-foreground text-lg">
-            Industrial Engineering & Tech-Project Management
-          </p>
-        </Reveal>
-
-        <div className="grid lg:grid-cols-[300px_1fr] gap-10 items-start">
+        <div className="grid lg:grid-cols-[300px_1fr] gap-14 items-start mb-20">
           <Reveal className="space-y-4">
-            <div className="rounded-lg overflow-hidden border border-border/50 bg-muted/20 shadow-lg">
+            <div className="rounded-lg overflow-hidden border border-border/50 bg-muted/20 shadow-xl shadow-black/30">
               <img
                 src={profileImage}
                 alt="Alessandro Salguero"
@@ -137,7 +130,15 @@ export default function About() {
             </Badge>
           </Reveal>
 
-          <div className="space-y-8">
+          <div className="space-y-10">
+            <Reveal>
+              <p className="font-mono text-sm text-cyan-400 mb-3">{"// "}About</p>
+              <h1 className="text-4xl md:text-5xl font-bold mb-3">About Me</h1>
+              <p className="text-muted-foreground text-lg">
+                Industrial Engineering & Tech-Project Management
+              </p>
+            </Reveal>
+
             <Reveal className="space-y-4">
               <p className="text-muted-foreground leading-relaxed">
                 I'm <span className="text-foreground font-medium">Alessandro Salguero</span>, an{" "}
@@ -161,7 +162,7 @@ export default function About() {
               <RevealGroup className="grid grid-cols-3 sm:grid-cols-5 gap-3">
                 {technologies.map((tech) => (
                   <RevealItem key={tech.name}>
-                    <Card className="p-4 bg-card/50 border-border flex flex-col items-center gap-2">
+                    <Card className="p-4 bg-card/50 border-border flex flex-col items-center gap-2 shadow-md shadow-black/20 hover:border-primary/40 hover:-translate-y-0.5 transition-all duration-300">
                       <tech.icon className={`w-7 h-7 ${tech.color}`} />
                       <span className="text-xs text-muted-foreground">{tech.name}</span>
                     </Card>
@@ -172,9 +173,9 @@ export default function About() {
 
             <div>
               <h3 className="font-mono text-sm text-cyan-400 mb-4">{"// "}In Numbers</h3>
-              <RevealGroup className="grid grid-cols-2 gap-4 max-w-md mx-auto">
+              <RevealGroup className="grid grid-cols-2 gap-6 max-w-sm">
                 {stats.map((stat) => (
-                  <RevealItem key={stat.label} className="text-center">
+                  <RevealItem key={stat.label}>
                     <p className="text-3xl font-bold text-primary">{stat.value}</p>
                     <p className="text-xs text-muted-foreground">{stat.label}</p>
                   </RevealItem>
@@ -184,7 +185,7 @@ export default function About() {
           </div>
         </div>
 
-        <Reveal className="mt-12 font-mono text-sm text-muted-foreground p-4 bg-muted/20 rounded-lg border border-border/50">
+        <Reveal className="mb-6 font-mono text-sm text-muted-foreground p-4 bg-muted/20 rounded-lg border border-border/50">
           <p className="mb-2">
             <span className="text-green-400">$</span>{" "}
             <span className="text-cyan-400">cat</span> ~/career/highlights.json
@@ -195,7 +196,7 @@ export default function About() {
         </Reveal>
 
         <Reveal>
-        <Card className="mt-6 bg-card/80 border-border overflow-hidden">
+        <Card className="bg-card/80 border-border overflow-hidden shadow-xl shadow-black/30">
           <div className="flex items-center gap-2 px-4 py-3 bg-muted/30 border-b border-border">
             <div className="flex gap-1.5">
               <div className="w-3 h-3 rounded-full bg-red-500" />

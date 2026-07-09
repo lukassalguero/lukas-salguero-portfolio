@@ -18,10 +18,10 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import madeEasyImage from "@assets/image_1768021374263.png";
 import bypImage from "@assets/image_1767853449347.png";
 import mirandaImage from "@assets/image_1767853503776.png";
+import laMetaImage from "@assets/academia_la_meta_hero.png";
 
 const quickStats = [
   { value: "5-Stage", label: "Data Pipeline", icon: Database },
-  { value: "3", label: "Web Launches", icon: Globe },
   { value: "7+", label: "Projects Completed", icon: Award },
 ];
 
@@ -111,6 +111,18 @@ const webProjects = [
     hasLive: true,
     liveUrl: "https://mafirma.pe/es/firma",
   },
+  {
+    id: 5,
+    name: "Academia_La_Meta - WEBSITE",
+    client: "Academia La Meta",
+    date: "December 2024",
+    description: "Design and development of a web platform for Academia La Meta with a focus on user experience, performance, and conversion. The site allows students to learn about the academic offerings and communicate instantly through WhatsApp integration.",
+    tech: ["HTML", "AI Tools"],
+    image: laMetaImage,
+    hasDemo: false,
+    hasLive: true,
+    liveUrl: "https://www.lametalima.com/",
+  },
 ];
 
 const techColors: Record<string, string> = {
@@ -186,7 +198,7 @@ export default function Portfolio() {
         {/* Featured Data Analytics Project */}
         <Reveal
           id="data-analytics-section"
-          className="rounded-xl bg-card border border-border overflow-hidden mb-8 scroll-mt-8"
+          className="rounded-xl bg-card border border-border overflow-hidden mb-12 shadow-xl shadow-black/30 scroll-mt-8"
           data-testid="card-project-analytics"
         >
           <div className="p-8">
@@ -248,7 +260,7 @@ export default function Portfolio() {
             </RevealGroup>
 
             {/* Key Takeaways */}
-            <div className="mb-6 p-4 rounded-lg bg-muted/20 border border-border/50">
+            <div className="mb-6 p-4 rounded-lg bg-muted/20 border border-border/50 shadow-sm shadow-black/20">
               <p className="font-mono text-xs text-cyan-400 mb-3 flex items-center gap-2">
                 <Lightbulb className="w-3.5 h-3.5" />
                 {"// Key Takeaways"}
@@ -335,7 +347,7 @@ export default function Portfolio() {
         </Reveal>
 
         {/* Divider */}
-        <Reveal id="web-projects-section" className="flex items-center gap-4 my-12 scroll-mt-8">
+        <Reveal id="web-projects-section" className="flex items-center gap-4 my-16 scroll-mt-8">
           <div className="flex-1 h-px bg-border" />
           <span className="font-mono text-sm text-muted-foreground">{"// web_development_projects"}</span>
           <div className="flex-1 h-px bg-border" />
@@ -346,7 +358,7 @@ export default function Portfolio() {
           {webProjects.map((project) => (
             <RevealItem
               key={project.id}
-              className="group rounded-xl bg-card border border-border overflow-hidden hover:border-primary/40 hover:-translate-y-1 transition-all duration-300 flex flex-col"
+              className="group rounded-xl bg-card border border-border overflow-hidden shadow-lg shadow-black/20 hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
               data-testid={`card-project-${project.id}`}
             >
               <div className="relative aspect-video overflow-hidden">
@@ -426,7 +438,7 @@ export default function Portfolio() {
         </RevealGroup>
 
         {/* Closing CTA */}
-        <Reveal className="mt-16 text-center rounded-xl bg-card/50 border border-border p-10">
+        <Reveal className="mt-16 text-center rounded-xl bg-card/50 border border-border p-10 shadow-xl shadow-black/30">
           <p className="font-mono text-sm text-cyan-400 mb-3">{"// "}Next Steps</p>
           <h3 className="text-2xl md:text-3xl font-bold mb-3">Have a project in mind?</h3>
           <p className="text-muted-foreground mb-6 max-w-md mx-auto">

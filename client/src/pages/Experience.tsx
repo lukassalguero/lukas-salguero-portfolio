@@ -76,17 +76,17 @@ export default function Experience() {
           <span className="text-cyan-400">{"// "}</span>Experience
         </div>
 
-        <Reveal className="mb-8">
+        <Reveal className="mb-10">
           <h1 className="text-4xl font-bold mb-4">Professional Experience</h1>
           <p className="text-lg text-muted-foreground">My professional journey in business and technology.</p>
         </Reveal>
 
         {/* Quick Stats */}
-        <RevealGroup className="flex flex-wrap items-center gap-3 mb-12">
+        <RevealGroup className="flex flex-wrap items-center gap-3 mb-14">
           {quickStats.map((stat) => (
             <RevealItem
               key={stat.label}
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-card/60 border border-border font-mono text-xs"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-card/60 border border-border font-mono text-xs shadow-sm shadow-black/20"
             >
               <stat.icon className="w-3.5 h-3.5 text-primary" />
               <span className="font-bold text-foreground">{stat.value}</span>
@@ -98,7 +98,7 @@ export default function Experience() {
         <div className="relative">
           <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-border to-border hidden md:block" />
 
-          <RevealGroup className="space-y-8">
+          <RevealGroup className="space-y-10">
             {experiences.map((exp) => (
               <RevealItem key={exp.id} className="relative" data-testid={`experience-${exp.id}`}>
                 <div className="md:pl-20">
@@ -108,7 +108,7 @@ export default function Experience() {
                     </div>
                   </div>
 
-                  <Card className="p-6 bg-card/50 border-border hover:border-primary/30 hover:-translate-y-1 transition-all duration-300">
+                  <Card className="p-6 bg-card/50 border-border shadow-lg shadow-black/20 hover:border-primary/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                     <div className="flex flex-col md:flex-row gap-6">
                       <div className="flex-1 min-w-0">
                         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
@@ -224,7 +224,7 @@ export default function Experience() {
         </div>
 
         {/* Core Strengths */}
-        <Reveal className="mt-12 p-6 rounded-xl bg-muted/20 border border-border/50">
+        <Reveal className="mt-16 p-6 rounded-xl bg-muted/20 border border-border/50 shadow-md shadow-black/20">
           <p className="font-mono text-sm text-cyan-400 mb-4 flex items-center gap-2">
             <Sparkles className="w-3.5 h-3.5" />
             {"// Core Strengths"}
@@ -244,7 +244,7 @@ export default function Experience() {
         </Reveal>
 
         {/* Closing CTA */}
-        <Reveal className="mt-8 text-center rounded-xl bg-card/50 border border-border p-10">
+        <Reveal className="mt-8 text-center rounded-xl bg-card/50 border border-border p-10 shadow-xl shadow-black/30">
           <h3 className="text-2xl md:text-3xl font-bold mb-3">Like what you see?</h3>
           <p className="text-muted-foreground mb-6 max-w-md mx-auto">
             Let's talk about how I can help your team move faster.
