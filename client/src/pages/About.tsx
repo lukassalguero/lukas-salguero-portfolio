@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Briefcase, Code, BarChart3, ChevronLeft, ChevronRight } from "lucide-react";
 import { SiPython, SiSalesforce, SiSlack, SiPostgresql } from "react-icons/si";
+import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 import profileImage from "@assets/FotoDePerfilNew_1767892057825.jpeg";
 import highlightImage1 from "@assets/WhatsApp_Image_2026-01-08_at_12.30.17_PM_(1)_1767893932207.jpeg";
 import highlightImage2 from "@assets/WhatsApp_Image_2026-01-08_at_12.44.08_PM_1767894301281.jpeg";
@@ -113,15 +114,15 @@ export default function About() {
   return (
     <div className="min-h-[calc(100vh-100px)] py-12 px-4">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
+        <Reveal className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-3">About Me</h1>
           <p className="text-muted-foreground text-lg">
             Industrial Engineering & Tech-Project Management
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid lg:grid-cols-[300px_1fr] gap-10 items-start">
-          <div className="space-y-4">
+          <Reveal className="space-y-4">
             <div className="rounded-lg overflow-hidden border border-border/50 bg-muted/20 shadow-lg">
               <img
                 src={profileImage}
@@ -134,10 +135,10 @@ export default function About() {
               <CheckCircle className="w-4 h-4" />
               Open to Work
             </Badge>
-          </div>
+          </Reveal>
 
           <div className="space-y-8">
-            <div className="space-y-4">
+            <Reveal className="space-y-4">
               <p className="text-muted-foreground leading-relaxed">
                 I'm <span className="text-foreground font-medium">Alessandro Salguero</span>, an{" "}
                 <span className="text-primary">Industrial Engineer</span> focused on Project Management
@@ -153,38 +154,37 @@ export default function About() {
                 <span className="text-cyan-400">LATAM</span>, where I can take ownership early, learn
                 quickly, and support teams across project management, sales, and strategy.
               </p>
-            </div>
+            </Reveal>
 
             <div>
               <h3 className="font-mono text-sm text-cyan-400 mb-4">{"// "}Technologies</h3>
-              <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
+              <RevealGroup className="grid grid-cols-3 sm:grid-cols-5 gap-3">
                 {technologies.map((tech) => (
-                  <Card 
-                    key={tech.name}
-                    className="p-4 bg-card/50 border-border flex flex-col items-center gap-2"
-                  >
-                    <tech.icon className={`w-7 h-7 ${tech.color}`} />
-                    <span className="text-xs text-muted-foreground">{tech.name}</span>
-                  </Card>
+                  <RevealItem key={tech.name}>
+                    <Card className="p-4 bg-card/50 border-border flex flex-col items-center gap-2">
+                      <tech.icon className={`w-7 h-7 ${tech.color}`} />
+                      <span className="text-xs text-muted-foreground">{tech.name}</span>
+                    </Card>
+                  </RevealItem>
                 ))}
-              </div>
+              </RevealGroup>
             </div>
 
             <div>
               <h3 className="font-mono text-sm text-cyan-400 mb-4">{"// "}In Numbers</h3>
-              <div className="grid grid-cols-2 gap-4 max-w-md mx-auto">
+              <RevealGroup className="grid grid-cols-2 gap-4 max-w-md mx-auto">
                 {stats.map((stat) => (
-                  <div key={stat.label} className="text-center">
+                  <RevealItem key={stat.label} className="text-center">
                     <p className="text-3xl font-bold text-primary">{stat.value}</p>
                     <p className="text-xs text-muted-foreground">{stat.label}</p>
-                  </div>
+                  </RevealItem>
                 ))}
-              </div>
+              </RevealGroup>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 font-mono text-sm text-muted-foreground p-4 bg-muted/20 rounded-lg border border-border/50">
+        <Reveal className="mt-12 font-mono text-sm text-muted-foreground p-4 bg-muted/20 rounded-lg border border-border/50">
           <p className="mb-2">
             <span className="text-green-400">$</span>{" "}
             <span className="text-cyan-400">cat</span> ~/career/highlights.json
@@ -192,8 +192,9 @@ export default function About() {
           <p className="text-muted-foreground/60 animate-pulse">
             Loading professional milestones...
           </p>
-        </div>
+        </Reveal>
 
+        <Reveal>
         <Card className="mt-6 bg-card/80 border-border overflow-hidden">
           <div className="flex items-center gap-2 px-4 py-3 bg-muted/30 border-b border-border">
             <div className="flex gap-1.5">
@@ -301,6 +302,7 @@ export default function About() {
             </Button>
           </div>
         </Card>
+        </Reveal>
       </div>
     </div>
   );
