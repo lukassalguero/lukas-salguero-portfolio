@@ -218,15 +218,15 @@
 
   .no-default-active-elevate {}
 
-  /* Depth backdrop: near-black to dark blue-gray wash, a visible top
+  /* Depth backdrop: near-black to dark blue-gray wash, a subtle top
      radial glow in the site's accent blue, and a dev-style grid. */
   .bg-dev-grid {
     background-color: hsl(var(--background));
     background-image:
-      radial-gradient(ellipse 1300px 700px at 50% -10%, hsla(199, 89%, 55%, 0.18), transparent 70%),
-      linear-gradient(to right, hsla(0, 0%, 100%, 0.10) 1px, transparent 1px),
-      linear-gradient(to bottom, hsla(0, 0%, 100%, 0.10) 1px, transparent 1px),
-      linear-gradient(180deg, hsl(222 47% 4%) 0%, hsl(220 30% 13%) 100%);
+      radial-gradient(ellipse 1300px 700px at 50% -10%, hsla(199, 89%, 55%, 0.09), transparent 70%),
+      linear-gradient(to right, hsla(0, 0%, 100%, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, hsla(0, 0%, 100%, 0.05) 1px, transparent 1px),
+      linear-gradient(180deg, hsl(222 47% 4%) 0%, hsl(221 38% 9%) 100%);
     background-size: 100% 100%, 48px 48px, 48px 48px, 100% 100%;
     background-repeat: no-repeat, repeat, repeat, no-repeat;
     background-attachment: fixed, fixed, fixed, fixed;
