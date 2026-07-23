@@ -2,10 +2,11 @@ import { Link } from "wouter";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Briefcase, Building2, Code2, Award, Clock, Layers, Camera, Sparkles, ArrowRight } from "lucide-react";
+import { Briefcase, Building2, Code2, Award, Clock, Layers, Sparkles, ArrowRight } from "lucide-react";
 import bcpTeamImage1 from "@assets/image_1767855533853.png";
 import bcpTeamImage2 from "@assets/image_1767890527899.png";
 import freelanceImage from "@assets/image_1767891188314.png";
+import siemensImage from "@assets/siemensenergy.jfif";
 import { Reveal, RevealGroup, RevealItem } from "@/components/Reveal";
 
 const quickStats = [
@@ -17,7 +18,7 @@ const quickStats = [
 const experiences = [
   {
     id: 1,
-    role: "Project Management Office",
+    role: "Project Management Jr",
     company: "Siemens Energy",
     period: "June 2025 – Present",
     current: true,
@@ -30,7 +31,7 @@ const experiences = [
       "CRM & Pipeline execution: Managed account updates and project milestones in Salesforce while coordinating internal stakeholders during hardware/software deployments, and maintenance operations to ensure on-time execution.",
     ],
     skills: ["Project Execution", "B2B Sales", "Risk Management"],
-    pendingPhoto: true,
+    teamImages: [siemensImage],
   },
   {
     id: 2,
@@ -52,13 +53,13 @@ const experiences = [
     id: 3,
     role: "Digital Solutions Consultant | Freelancer",
     company: "Self-Employed",
-    period: "June 2024 - April 2025",
+    period: "Oct 2024 – Mar 2025",
     icon: Code2,
     color: "text-green-400",
     bgColor: "bg-green-500/10",
     highlights: [
-      "Digital Growth and Solutions: Developed custom websites for local businesses to increase their digital presence. I used AI tools to optimize development and deliver high quality solutions that helped clients boost their brand and online sales.",
-      "Managed a full business operation: First meeting with clients, identifying client needs, negotiating prices and finally the web development, ensuring the domain and hosting were set up correctly for a perfect launch.",
+      "Independent Business Operations: Sold and built 4 AI-powered websites for local university test-prep academies.",
+      "End-to-End Client Management: Ran the full cycle solo — first meeting, needs assessment, and price negotiation through web development — delivering every project on time and keeping clients satisfied.",
     ],
     skills: ["AI Tools", "Business Operations", "Client Management"],
     teamImages: [freelanceImage],
@@ -197,21 +198,6 @@ export default function Experience() {
                                 />
                               </div>
                             ))}
-                          </div>
-                        </aside>
-                      )}
-
-                      {exp.pendingPhoto && (
-                        <aside className="md:w-44 lg:w-52 shrink-0 mx-auto md:mx-0 md:self-center">
-                          <div className="font-mono text-xs text-muted-foreground mb-2 text-center md:text-left">
-                            <span className="text-cyan-400">{"// "}</span>Team
-                          </div>
-                          <div
-                            className="rounded-lg overflow-hidden border border-dashed border-border/70 bg-muted/10 aspect-[4/5] flex flex-col items-center justify-center gap-2 text-muted-foreground/60"
-                            data-testid={`img-placeholder-${exp.id}`}
-                          >
-                            <Camera className="w-6 h-6" />
-                            <p className="text-[11px] font-mono text-center px-3">Photo coming soon</p>
                           </div>
                         </aside>
                       )}

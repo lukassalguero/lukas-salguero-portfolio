@@ -44,7 +44,7 @@ const highlights = [
     category: "Current Job Position",
     code: {
       company: "Siemens Energy",
-      role: "Project Management Office",
+      role: "Project Management Jr",
       year: "June 2025 – Present",
       "Business Area": "Gas Services",
     },
